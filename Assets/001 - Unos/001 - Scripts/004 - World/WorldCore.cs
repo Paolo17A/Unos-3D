@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class WorldCore : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //=================================================================================================
+    [Header("SETTINGS VARIABLES")]
+    [SerializeField] private GameObject SettingsPanel;
+    //=================================================================================================
+
+    #region SETTINGS
+    public void DisplaySettingsPanel()
     {
-        
+        SettingsPanel.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void HideSettingsPanel()
     {
-        
+        SettingsPanel.SetActive(false);
     }
+
+    public void ReturnToMainMenu()
+    {
+        GameManager.Instance.SceneController.CurrentScene = "MainMenuScene";
+    }
+    #endregion
 }

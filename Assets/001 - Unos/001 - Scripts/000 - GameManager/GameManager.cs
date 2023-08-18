@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     }
 
     public enum Gender { NONE, MALE, FEMALE }
+    public enum Calamity { NONE, TYPHOON, EARTHQUAKE}
     [field: SerializeField] public List<GameObject> GameMangerObj { get; set; }
 
     [field: SerializeField] public bool DebugMode { get; set; }
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
     [field: SerializeField][field: ReadOnly] public Gender PlayerGender { get; set; }
     [field: SerializeField][field: ReadOnly] public string Username { get; set; }
     [field: SerializeField][field: ReadOnly] public int Pesos { get; set; }
+    [field: SerializeField][field: ReadOnly] public Calamity CurrentCalamity { get; set; }
 
     [field: Header("CAMERA")]
     [field: SerializeField] public Camera MainCamera { get; set; }

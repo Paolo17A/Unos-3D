@@ -119,6 +119,9 @@ public class MainMenuCore : MonoBehaviour
 
     public void GoToGenderSelectScene()
     {
-        GameManager.Instance.SceneController.CurrentScene = "GenderSelectScene";
+        if(GameManager.Instance.CurrentCalamity == GameManager.Calamity.NONE)
+            GameManager.Instance.SceneController.CurrentScene = "GenderSelectScene";
+        else if (GameManager.Instance.CurrentCalamity == GameManager.Calamity.EARTHQUAKE)
+            GameManager.Instance.SceneController.CurrentScene = "WorldScene";
     }
 }
