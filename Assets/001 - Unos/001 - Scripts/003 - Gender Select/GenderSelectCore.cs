@@ -67,7 +67,7 @@ public class GenderSelectCore : MonoBehaviour
 
         GameManager.Instance.PlayerGender = SelectedGender;
         GameManager.Instance.Username = UsernameTMPInput.text;
-        GameManager.Instance.SceneController.CurrentScene = "WorldScene";
+        GameManager.Instance.SceneController.CurrentScene = "LobbyScene";
     }
     #endregion
 }

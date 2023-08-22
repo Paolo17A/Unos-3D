@@ -15,6 +15,21 @@ EditorBuildSettings:
     path: Assets/001 - Unos/000 - Scenes/GenderSelectScene.unity
     guid: 33fa8872f39ee8946b27a226eabb3727
   - enabled: 1
+    path: Assets/001 - Unos/000 - Scenes/LobbyScene.unity
+    guid: 292367890ae6ea348a3fd1c70df8c897
+  - enabled: 1
     path: Assets/001 - Unos/000 - Scenes/WorldScene.unity
     guid: 6ab559f8f3960d448bd5ae17f85132c1
+  - enabled: 1
+    path: Assets/001 - Unos/000 - Scenes/HardwareStoreScene.unity
+    guid: c178b22eb8275fe4b92f3e31552bcdb8
+  - enabled: 1
+    path: Assets/001 - Unos/000 - Scenes/MarketScene.unity
+    guid: 3e440d33bb875ad4e919d59148903021
+  - enabled: 1
+    path: Assets/001 - Unos/000 - Scenes/DrugstoreScene.unity
+    guid: 6e2cedd1a4dfba2489966c014e6ce13e
+  - enabled: 1
+    path: Assets/001 - Unos/000 - Scenes/HouseScene.unity
+    guid: 41d1034f7c4e9ab499d623b9bbf1289e
   m_configObjects: {}

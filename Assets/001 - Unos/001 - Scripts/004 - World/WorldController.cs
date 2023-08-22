@@ -11,4 +11,13 @@ public class WorldController : MonoBehaviour
         GameManager.Instance.MainCamera.clearFlags = CameraClearFlags.Skybox;
         GameManager.Instance.SceneController.ActionPass = true;
     }
+
+    private void Start()
+    {
+        WorldCore.SetProperZones();
+        WorldCore.ToggleQuestPanel();
+        WorldCore.InitializeQuests();
+        WorldCore.HideZonePopUp();
+        WorldCore.SetPlayerSpawnPosition();
+    }
 }

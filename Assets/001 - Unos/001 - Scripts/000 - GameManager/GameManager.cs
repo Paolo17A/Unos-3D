@@ -40,6 +40,9 @@ public class GameManager : MonoBehaviour
     [field: SerializeField][field: ReadOnly] public string Username { get; set; }
     [field: SerializeField][field: ReadOnly] public int Pesos { get; set; }
     [field: SerializeField][field: ReadOnly] public Calamity CurrentCalamity { get; set; }
+    [field: SerializeField][field: ReadOnly] public List<Calamity> FinishedCalamities { get; set; }
+    [field: SerializeField][field: ReadOnly] public QuestData CurrentQuest { get; set; }
+    [field: SerializeField] public List<QuestData> TyphoonQuests { get; set; }
 
     [field: Header("CAMERA")]
     [field: SerializeField] public Camera MainCamera { get; set; }
@@ -77,6 +80,12 @@ public class GameManager : MonoBehaviour
             SceneController.CurrentScene = SceneToLoad;
         else
             SceneController.CurrentScene = "MainMenuScene";
+
+        foreach(QuestData quest in TyphoonQuests)
+        {
+            quest.IsAccomplised = false;
+            quest.ItemsToGet.Clear();
+        }
     }
     #endregion
 

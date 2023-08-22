@@ -4,11 +4,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //=============================================================================================
+    [SerializeField] private WorldCore WorldCore;
+
     [Header("MOVEMENT VARIABLES")]
     [SerializeField] private Animator anim;
     [SerializeField] private CharacterController controller;
     [SerializeField] private float maxSpeed = 15;
-    [SerializeField] private Transform cameraTransform;
     [SerializeField] Joystick joystick;
 
     [Header("GENDER VARIABLES")]
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (WorldCore.IsSettingsOpen()) return;
         if(Application.isEditor)
         {
              x = Input.GetAxis("Horizontal");
@@ -65,5 +67,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         anim.SetBool("isWalking", speed > 0);
+    }
+
+    public void InitializePlayer(WorldCore worldCore, Joystick joystick)
+    {
+        WorldCore = worldCore;
+        this.joystick = joystick;
     }
 }
