@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664776ff796c3294193675c6a70284e5, type: 3}
+  m_Name: RunToExit
+  m_EditorClassIdentifier: 
+  <ThisDialogueType>k__BackingField: 4
+  <DialogueContent>k__BackingField: You are knocked down by falling debris
+  <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: 9f3e2d9b622825740aebb49e45337324,
+    type: 3}
+  <DialogueBackgroundFemale>k__BackingField: {fileID: 21300000, guid: 9f3e2d9b622825740aebb49e45337324,
+    type: 3}
+  <AddedMale>k__BackingField: {fileID: 21300000, guid: ad5c5132b76885e40bfdf7ce5267bd8d,
+    type: 3}
+  <AddedFemale>k__BackingField: {fileID: 21300000, guid: 6fd868fd4ad28024b9921a7c25c263ac,
+    type: 3}
+  <AddedLocation>k__BackingField: {x: -1.39, y: -2.92, z: 0}
+  <ThirdPartySprite>k__BackingField: {fileID: 21300000, guid: 6c5e2cc3b2f7ffa479dba636cd95a251,
+    type: 3}
+  <ThirdPartyLocation>k__BackingField: {x: 0, y: 0, z: 0}
+  <HasExtraSprite>k__BackingField: 0
+  <WillDisplayBoat>k__BackingField: 0
+  <MustShowSelectables>k__BackingField: 0
+  <NextDialogue>k__BackingField: {fileID: 0}
+  <OptionDialogues>k__BackingField: []
+  <OptionContent>k__BackingField: []
+  <NextScene>k__BackingField: 
+  <EndingTrivia>k__BackingField: "During Earthquakes Don\u2019t go and run outside
+    when you are indoor when the quake started. Wait until the shaking stops or when
+    it is safe to go outside. - Philippine Institute of Volcanology and Seismology"
+  <SavePointDialogue>k__BackingField: {fileID: 11400000, guid: 31d4760c35a655547ba8e066b7ca2cce,
+    type: 2}
+  <MiniGameScene>k__BackingField: 
+  <ReturningPointDialogue>k__BackingField: {fileID: 0}

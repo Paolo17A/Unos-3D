@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     [field: SerializeField][field: ReadOnly] public List<Calamity> FinishedCalamities { get; set; }
     [field: SerializeField][field: ReadOnly] public QuestData CurrentQuest { get; set; }
     [field: SerializeField] public List<QuestData> TyphoonQuests { get; set; }
+    [field: SerializeField] public DialogueData CurrentEarthquakeDialogue { get; set; }
 
     [field: Header("CAMERA")]
     [field: SerializeField] public Camera MainCamera { get; set; }

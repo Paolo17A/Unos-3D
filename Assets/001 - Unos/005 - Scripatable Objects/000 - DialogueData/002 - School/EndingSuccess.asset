@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664776ff796c3294193675c6a70284e5, type: 3}
+  m_Name: EndingSuccess
+  m_EditorClassIdentifier: 
+  <ThisDialogueType>k__BackingField: 3
+  <DialogueContent>k__BackingField: 
+  <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: aeaf8a0683d0da248986919a2aa25651,
+    type: 3}
+  <DialogueBackgroundFemale>k__BackingField: {fileID: 21300000, guid: aeaf8a0683d0da248986919a2aa25651,
+    type: 3}
+  <AddedMale>k__BackingField: {fileID: 21300000, guid: fe4cb9093ea78d44a8a65d7249295e1d,
+    type: 3}
+  <AddedFemale>k__BackingField: {fileID: 21300000, guid: f2259a4d53874ca409b54bac29c8e8fd,
+    type: 3}
+  <AddedLocation>k__BackingField: {x: -4.71, y: -1.67, z: 0}
+  <ThirdPartySprite>k__BackingField: {fileID: 0}
+  <ThirdPartyLocation>k__BackingField: {x: 0, y: 0, z: 0}
+  <HasExtraSprite>k__BackingField: 0
+  <WillDisplayBoat>k__BackingField: 0
+  <MustShowSelectables>k__BackingField: 0
+  <NextDialogue>k__BackingField: {fileID: 0}
+  <OptionDialogues>k__BackingField: []
+  <OptionContent>k__BackingField: []
+  <NextScene>k__BackingField: 
+  <EndingTrivia>k__BackingField: During and after an earthquake, it is natural to
+    experience different and strong emotions. Coping with these feelings and getting
+    help when you need it will help you, your family, and your community recover
+    from a disaster. Connect with relatives and take care of yourself and each other
+    and know when and how to seek help. - Philippine Institute of Volcanology and
+    Seismology
+  <SavePointDialogue>k__BackingField: {fileID: 0}
+  <MiniGameScene>k__BackingField: 
+  <ReturningPointDialogue>k__BackingField: {fileID: 0}

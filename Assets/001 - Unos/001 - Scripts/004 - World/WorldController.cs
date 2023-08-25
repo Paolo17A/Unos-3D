@@ -15,8 +15,8 @@ public class WorldController : MonoBehaviour
     private void Start()
     {
         WorldCore.SetProperZones();
-        WorldCore.ToggleQuestPanel();
         WorldCore.InitializeQuests();
+        //WorldCore.ToggleQuestPanel();
         WorldCore.HideZonePopUp();
         WorldCore.SetPlayerSpawnPosition();
     }

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <IsAccomplised>k__BackingField: 0
   <ZoneName>k__BackingField: your house?
-  <SceneName>k__BackingField: HoseScene
+  <SceneName>k__BackingField: HouseScene
   <ItemsToGet>k__BackingField: 

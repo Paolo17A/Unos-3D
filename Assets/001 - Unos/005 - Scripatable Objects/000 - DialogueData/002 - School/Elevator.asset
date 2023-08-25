@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664776ff796c3294193675c6a70284e5, type: 3}
+  m_Name: Elevator
+  m_EditorClassIdentifier: 
+  <ThisDialogueType>k__BackingField: 4
+  <DialogueContent>k__BackingField: 'The Elevator was unstable and you fell down
+    along with it. '
+  <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: 461edbd10da712d4682990bf0a83fbae,
+    type: 3}
+  <DialogueBackgroundFemale>k__BackingField: {fileID: 21300000, guid: 461edbd10da712d4682990bf0a83fbae,
+    type: 3}
+  <AddedMale>k__BackingField: {fileID: 0}
+  <AddedFemale>k__BackingField: {fileID: 0}
+  <AddedLocation>k__BackingField: {x: 0, y: 0, z: 0}
+  <ThirdPartySprite>k__BackingField: {fileID: 0}
+  <ThirdPartyLocation>k__BackingField: {x: 0, y: 0, z: 0}
+  <HasExtraSprite>k__BackingField: 0
+  <WillDisplayBoat>k__BackingField: 0
+  <MustShowSelectables>k__BackingField: 0
+  <NextDialogue>k__BackingField: {fileID: 0}
+  <OptionDialogues>k__BackingField: []
+  <OptionContent>k__BackingField: []
+  <NextScene>k__BackingField: 
+  <EndingTrivia>k__BackingField: "After an earthquake don\u2019t use the elevator
+    in going down as the electric power may be interrupted. Unstable elevator may
+    cause you harm, even worse, death.  - Philippine Institute of Volcanology and
+    Seismology"
+  <SavePointDialogue>k__BackingField: {fileID: 11400000, guid: a8039d1b6dc8d6a489f918434fafd0c7,
+    type: 2}
+  <MiniGameScene>k__BackingField: 
+  <ReturningPointDialogue>k__BackingField: {fileID: 0}

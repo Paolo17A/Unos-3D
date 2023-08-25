@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664776ff796c3294193675c6a70284e5, type: 3}
+  m_Name: DialogueData 6
+  m_EditorClassIdentifier: 
+  <ThisDialogueType>k__BackingField: 2
+  <DialogueContent>k__BackingField: You went outside the classroom and saw two exits.
+    Which exit do you choose?
+  <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: f5feae7c24f677344a7525dbe8dc1711,
+    type: 3}
+  <DialogueBackgroundFemale>k__BackingField: {fileID: 21300000, guid: f5feae7c24f677344a7525dbe8dc1711,
+    type: 3}
+  <AddedMale>k__BackingField: {fileID: 21300000, guid: dd8f66f56df096545acde84fe41ccb50,
+    type: 3}
+  <AddedFemale>k__BackingField: {fileID: 21300000, guid: 1fc9a848d6c52df4bb37779794dad25c,
+    type: 3}
+  <AddedLocation>k__BackingField: {x: -7.48, y: -2.3, z: 0}
+  <ThirdPartySprite>k__BackingField: {fileID: 0}
+  <ThirdPartyLocation>k__BackingField: {x: 0, y: 0, z: 0}
+  <HasExtraSprite>k__BackingField: 0
+  <WillDisplayBoat>k__BackingField: 0
+  <MustShowSelectables>k__BackingField: 0
+  <NextDialogue>k__BackingField: {fileID: 0}
+  <OptionDialogues>k__BackingField:
+  - {fileID: 11400000, guid: 8e752d3c05ade5e469c8dc39772ea0da, type: 2}
+  - {fileID: 11400000, guid: 413552696466706439c3c65914f21f22, type: 2}
+  <OptionContent>k__BackingField:
+  - Go down the stairs
+  - Go inside the elevator
+  <NextScene>k__BackingField: 
+  <EndingTrivia>k__BackingField: 
+  <SavePointDialogue>k__BackingField: {fileID: 0}
+  <MiniGameScene>k__BackingField: TapGameScene
+  <ReturningPointDialogue>k__BackingField: {fileID: 0}

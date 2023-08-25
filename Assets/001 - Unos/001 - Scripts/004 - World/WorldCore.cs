@@ -12,6 +12,7 @@ public class WorldCore : MonoBehaviour
     [SerializeField] private GameObject SettingsPanel;
 
     [Header("QUESET VARIABLES")]
+    #region TYPHOON VARIABLES
     [SerializeField] private GameObject TyphoonQuestsContainer;
     [SerializeField] private QuestData DrugstoreQuest;
     [SerializeField] private Toggle DrugstoreToggle;
@@ -19,6 +20,8 @@ public class WorldCore : MonoBehaviour
     [SerializeField] private Toggle MarketToggle;
     [SerializeField] private QuestData HardwareStoreQuest;
     [SerializeField] private Toggle HardwareStoreToggle;
+    #endregion
+    [SerializeField] private OptionHandler MainQuestContainer;
     [SerializeField][ReadOnly] private bool showingQuest;
 
     [Header("ZONE VARIABLES")]
@@ -27,6 +30,7 @@ public class WorldCore : MonoBehaviour
     [SerializeField] private ZoneHandler HardwareStoreZone;
     [SerializeField] private ZoneHandler HouseZone;
     [SerializeField] private ZoneHandler SchoolZone;
+    [SerializeField] private DialogueData StartingSchoolDialogue;
     [SerializeField] private GameObject ZonePopUp;
     [SerializeField] private TextMeshProUGUI ZoneTMP;
     [ReadOnly] public ZoneHandler EnteredZone;
@@ -67,28 +71,78 @@ public class WorldCore : MonoBehaviour
     {
         if(GameManager.Instance.CurrentCalamity == GameManager.Calamity.TYPHOON)
         {
-            DrugstoreToggle.isOn = DrugstoreQuest.IsAccomplised;
-            MarketToggle.isOn = MarketQuest.IsAccomplised;
-            HardwareStoreToggle.isOn = HardwareStoreQuest.IsAccomplised;
+            MainQuestContainer.SetOptionText("Go back to your house.");
+            if (AllTyphoonQuestsDone())
+            {
+                TyphoonQuestsContainer.SetActive(false);
+                MainQuestContainer.gameObject.SetActive(true);
+            }
+            else
+            {
+                TyphoonQuestsContainer.SetActive(true);
+                MainQuestContainer.gameObject.SetActive(false);
+                DrugstoreToggle.isOn = DrugstoreQuest.IsAccomplised;
+                MarketToggle.isOn = MarketQuest.IsAccomplised;
+                HardwareStoreToggle.isOn = HardwareStoreQuest.IsAccomplised;
+            }
         }
+        else if (GameManager.Instance.CurrentCalamity == GameManager.Calamity.EARTHQUAKE)
+        {
+            TyphoonQuestsContainer.SetActive(false);
+            MainQuestContainer.gameObject.SetActive(true);
+            MainQuestContainer.SetOptionText("Go to the school.");
+        }
+        showingQuest = true;
+    }
+
+    private bool AllTyphoonQuestsDone()
+    {
+        return DrugstoreQuest.IsAccomplised && MarketQuest.IsAccomplised && HardwareStoreQuest.IsAccomplised;
     }
 
     public void ToggleQuestPanel()
     {
+        //  The quest is currently being displayed and we want to hide it
         if(showingQuest)
         {
             if (GameManager.Instance.CurrentCalamity == GameManager.Calamity.TYPHOON)
-                TyphoonQuestsContainer.SetActive(false);
-            
+            {
+                if(AllTyphoonQuestsDone())
+                {
+                    TyphoonQuestsContainer.SetActive(false);
+                    MainQuestContainer.gameObject.SetActive(false);
+                }
+                else
+                {
+                    TyphoonQuestsContainer.SetActive(false);
+                    MainQuestContainer.gameObject.SetActive(false);
+                }
+            }
+            else if (GameManager.Instance.CurrentCalamity == GameManager.Calamity.EARTHQUAKE)
+                MainQuestContainer.gameObject.SetActive(false);
+
         }
+        //  The quest is currently being hidden and we want to display it
         else
         {
             if (GameManager.Instance.CurrentCalamity == GameManager.Calamity.TYPHOON)
-                TyphoonQuestsContainer.SetActive(true);
+            {
+                if (AllTyphoonQuestsDone())
+                {
+                    TyphoonQuestsContainer.SetActive(false);
+                    MainQuestContainer.gameObject.SetActive(true);
+                }
+                else
+                {
+                    TyphoonQuestsContainer.SetActive(true);
+                    MainQuestContainer.gameObject.SetActive(false);
+                }
+            }
+            else if (GameManager.Instance.CurrentCalamity == GameManager.Calamity.EARTHQUAKE)
+                MainQuestContainer.gameObject.SetActive(true);
         }
         showingQuest = !showingQuest;
     }
-
     #endregion
 
     #region ZONE
@@ -123,6 +177,7 @@ public class WorldCore : MonoBehaviour
             DrugstoreZone.gameObject.SetActive(false);
             MarketZone.gameObject.SetActive(false);
             HardwareStoreZone.gameObject.SetActive(false);
+            HouseZone.gameObject.SetActive(false);
             SchoolZone.gameObject.SetActive(true);
         }
     }
@@ -143,6 +198,8 @@ public class WorldCore : MonoBehaviour
         if (zoneEntered) return;
         zoneEntered = true;
         GameManager.Instance.CurrentQuest = EnteredZone.QuestData;
+        if (EnteredZone.QuestData.SceneName == "SchoolScene")
+            GameManager.Instance.CurrentEarthquakeDialogue = StartingSchoolDialogue;
         GameManager.Instance.SceneController.CurrentScene = EnteredZone.QuestData.SceneName;
     }
     #endregion
@@ -157,8 +214,10 @@ public class WorldCore : MonoBehaviour
             PlayerCharacter.transform.position = new Vector3(MarketZone.transform.position.x, PlayerCharacter.transform.position.y, MarketZone.transform.position.z);
         else if (GameManager.Instance.SceneController.LastScene == "HardwareStoreScene")
             PlayerCharacter.transform.position = new Vector3(HardwareStoreZone.transform.position.x, PlayerCharacter.transform.position.y, HardwareStoreZone.transform.position.z);
+        else if (GameManager.Instance.SceneController.LastScene == "SchoolScene")
+            PlayerCharacter.transform.position = new Vector3(SchoolZone.transform.position.x, PlayerCharacter.transform.position.y, SchoolZone.transform.position.z);
         
-            PlayerCharacter.GetComponent<CharacterController>().enabled = true;
+        PlayerCharacter.GetComponent<CharacterController>().enabled = true;
     }
     #endregion
 }

@@ -17,6 +17,7 @@
 mono_crash.*
 
 /Library
+/Temp
 
 # Build results
 [Dd]ebug/

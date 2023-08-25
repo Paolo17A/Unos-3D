@@ -19,9 +19,20 @@ public class LobbyController : MonoBehaviour
 
     private void Update()
     {
-        if(Mouse.current.leftButton.isPressed && LobbyCore.CurrentDialogue.ThisDialogueType == DialogueData.DialogueType.TALKING && LobbyCore.DialogueFinished)
+        if(Application.isEditor)
         {
-            LobbyCore.LoadNextDialogue();
+            if (Mouse.current.leftButton.isPressed && LobbyCore.CurrentDialogue.ThisDialogueType == DialogueData.DialogueType.TALKING && LobbyCore.DialogueFinished)
+            {
+                LobbyCore.LoadNextDialogue();
+            }
+        }
+        else
+        {
+            if (Touchscreen.current.primaryTouch.press.isPressed && LobbyCore.CurrentDialogue.ThisDialogueType == DialogueData.DialogueType.TALKING && LobbyCore.DialogueFinished)
+            {
+                LobbyCore.LoadNextDialogue();
+            }
         }
     }
+
 }

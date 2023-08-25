@@ -32,4 +32,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/001 - Unos/000 - Scenes/HouseScene.unity
     guid: 41d1034f7c4e9ab499d623b9bbf1289e
+  - enabled: 1
+    path: Assets/001 - Unos/000 - Scenes/SchoolScene.unity
+    guid: bbba7e1db00d29f42b2064625979596e
+  - enabled: 1
+    path: Assets/001 - Unos/000 - Scenes/TapGameScene.unity
+    guid: 932dcae6832669640bcb1784f0f73213
+  - enabled: 1
+    path: Assets/001 - Unos/000 - Scenes/StairsGameScene.unity
+    guid: 247fb705bee82164db3e76593f45e79b
+  - enabled: 1
+    path: Assets/001 - Unos/000 - Scenes/CrossfireGameScene.unity
+    guid: c2a20bf7d191052479716ffcf65b3931
   m_configObjects: {}

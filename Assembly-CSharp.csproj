@@ -58,30 +58,41 @@
   <ItemGroup>
     <Compile Include="Assets\LeanTween\Framework\LeanTween.cs" />
     <Compile Include="Assets\LeanTween\Framework\LTDescr.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\009 - House\HouseController.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTweenExt.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\001 - Camera\CameraScaler.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingUnitTests.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\LeanTween\Framework\LTSeq.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\010 - School\SchoolCore.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralUISpace.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\004 - World\WorldController.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\006 - Scriptable Object\000 - Dialogue\DialogueData.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\013 - Crossfire\CrossfireController.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\012 - StairsGame\StairsGameCore.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\012 - StairsGame\TwoDimensionalPlayerMovement.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSimpleUI.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineEndless.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\003 - Gender Select\GenderSelectController.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\012 - StairsGame\StairsGameController.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\009 - House\HouseCore.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\000 - GameManager\SceneController.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\002 - MainMenu\MainMenuController.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplines.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\004 - World\PlayerMovement.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEventsListeners.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingZLegacy.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\007 - Interfaces\I_MiniGame.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\004 - World\WorldCore.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\008 - Store\StoreController.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingZLegacyExt.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier2d.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\011 - TapGame\TapGameCore.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\011 - TapGame\TapGameController.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\009 - House\OptionHandler.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\006 - Scriptable Object\001 - Quest\QuestData.cs" />
     <Compile Include="Assets\LeanTween\Framework\LTDescrOptional.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEasingTypes.cs" />
@@ -110,20 +121,22 @@
     <Compile Include="Assets\001 - Unos\001 - Scripts\001 - Camera\CanvasUICameraSetter.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\004 - World\MouseLook.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineTrack.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\013 - Crossfire\CrossfireCore.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\010 - School\SchoolController.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline2d.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\008 - Store\InstantiatedItemHandler.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplinePerformance.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\000 - GameManager\GameManager.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\013 - Crossfire\TwoDimensionalJoystickMovement.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\004 - World\ZoneHandler.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\004 - World\FreelookHandler.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\012 - StairsGame\DebrisHandler.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasic.cs" />
     <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\008 - Store\DisplayedItemHandler.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
-    <Compile Include="Assets\001 - Unos\001 - Scripts\009 - House\HouseCore.cs" />
-    <Compile Include="Assets\001 - Unos\001 - Scripts\009 - House\HouseController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ReadOnlyAttribute\README.txt" />
@@ -151,6 +164,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Hovl Studio\Magic effects pack\Demo scene\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>

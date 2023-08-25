@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -59,9 +60,9 @@ public class SceneController : MonoBehaviour
     [SerializeField] private Slider loadingSlider;
     [SerializeField] private CanvasGroup loadingCG;
 
-    [Header("BACKGROUND SPRITES")]
-    [SerializeField] private Image backgroundImage;
-    [SerializeField] private List<Sprite> backgroundSprites;
+    [Header("TRIVIAS")]
+    [SerializeField][TextArea(minLines:4, maxLines: 7)] private List<string> Trivias;
+    [SerializeField] private TextMeshProUGUI TriviaTMP;
 
     [Header("LEANTWEEN ANIMATION")]
     [SerializeField] private LeanTweenType easeType;
@@ -98,8 +99,8 @@ public class SceneController : MonoBehaviour
 
     public IEnumerator Loading()
     {
-        /*int randomIndex = UnityEngine.Random.Range(0, backgroundSprites.Count);
-        backgroundImage.sprite = backgroundSprites[randomIndex];*/
+        int randomIndex = UnityEngine.Random.Range(0, Trivias.Count);
+        TriviaTMP.text = Trivias[randomIndex];
         Time.timeScale = 0f;
 
         actionPass = false;

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664776ff796c3294193675c6a70284e5, type: 3}
+  m_Name: Rescued
+  m_EditorClassIdentifier: 
+  <ThisDialogueType>k__BackingField: 3
+  <DialogueContent>k__BackingField: Rescuers came and you were safely rescued
+  <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: fc7c552f805f0114996112f07c04efe5,
+    type: 3}
+  <DialogueBackgroundFemale>k__BackingField: {fileID: 21300000, guid: fc7c552f805f0114996112f07c04efe5,
+    type: 3}
+  <AddedMale>k__BackingField: {fileID: 21300000, guid: cb7e53abcda8f16418692057b72d6345,
+    type: 3}
+  <AddedFemale>k__BackingField: {fileID: 21300000, guid: 730ef9c9681630d4eb9c26157682b5f9,
+    type: 3}
+  <AddedLocation>k__BackingField: {x: -2.67, y: -1.54, z: 0}
+  <ThirdPartySprite>k__BackingField: {fileID: 21300000, guid: f4a37d6041486e54fab4b67469e56fb0,
+    type: 3}
+  <ThirdPartyLocation>k__BackingField: {x: -7.06, y: -1.18, z: 0}
+  <HasExtraSprite>k__BackingField: 1
+  <WillDisplayBoat>k__BackingField: 1
+  <MustShowSelectables>k__BackingField: 0
+  <NextDialogue>k__BackingField: {fileID: 0}
+  <OptionDialogues>k__BackingField: []
+  <OptionContent>k__BackingField: []
+  <NextScene>k__BackingField: LobbyScene
+  <EndingTrivia>k__BackingField: 'If you''re caught in a flash flood and the water
+    level is rising rapidly, immediately move to higher ground. Signal for Help:
+    Use any available means to signal rescuers. This could include waving bright
+    clothing, using a flashlight, or even shouting. If you have access to a whistle,
+    use it to attract attention. Position yourself where rescuers can easily spot
+    you. Avoid dense vegetation or debris that might obstruct their view. If you''re
+    in a building, move to an upper floor if possible. - (Philippine Atmospheric,
+    Geophysical and Astronomical Services Administration)'
+  <SavePointDialogue>k__BackingField: {fileID: 0}
+  <MiniGameScene>k__BackingField: 
+  <ReturningPointDialogue>k__BackingField: {fileID: 0}

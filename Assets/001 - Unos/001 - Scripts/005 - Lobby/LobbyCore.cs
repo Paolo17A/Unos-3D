@@ -73,7 +73,8 @@ public class LobbyCore : MonoBehaviour, I_Dialogue
         {
             if (!GameManager.Instance.FinishedCalamities.Contains(GameManager.Calamity.TYPHOON))
                 TyphoonChoice.SetActive(true);
-            EarthquakeChoice.SetActive(true);
+            if (!GameManager.Instance.FinishedCalamities.Contains(GameManager.Calamity.EARTHQUAKE))
+                EarthquakeChoice.SetActive(true);
         }
         else if (CurrentDialogue.ThisDialogueType == DialogueData.DialogueType.ENDING_SUCCESS)
             StartBtn.gameObject.SetActive(true);
