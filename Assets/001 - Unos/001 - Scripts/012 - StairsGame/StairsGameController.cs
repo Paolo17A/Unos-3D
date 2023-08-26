@@ -34,7 +34,6 @@ public class StairsGameController : MonoBehaviour
                 StairsGameCore.HandleMovement();
                 break;
             case StairsGameCore.StairsGameStates.STONED:
-                GameManager.Instance.CurrentEarthquakeDialogue = GameManager.Instance.CurrentEarthquakeDialogue.SavePointDialogue;
                 StairsGameCore.HandleFailure();
                 break;
             case StairsGameCore.StairsGameStates.SAFE:

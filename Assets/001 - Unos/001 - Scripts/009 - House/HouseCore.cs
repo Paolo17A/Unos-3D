@@ -124,7 +124,7 @@ public class HouseCore : MonoBehaviour, I_Dialogue
         }
         else if (CurrentDialogue.ThisDialogueType == DialogueData.DialogueType.ENDING_SUCCESS || CurrentDialogue.ThisDialogueType == DialogueData.DialogueType.ENDING_FAIL)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.025f);
             TriviaPanel.SetActive(true);
             TriviaPanelTMP.text = CurrentDialogue.EndingTrivia;
             Proceed.SetActive(true);
@@ -224,8 +224,12 @@ public class HouseCore : MonoBehaviour, I_Dialogue
         if (alreadySelected) return;
 
         alreadySelected = true;
+        GameManager.Instance.CurrentCalamity = GameManager.Calamity.NONE;
         if (GameManager.Instance.FinishedCalamities.Count == 2)
+        {
+            GameManager.Instance.FinishedCalamities.Clear();
             GameManager.Instance.SceneController.CurrentScene = "MainMenuScene";
+        }
         else
             GameManager.Instance.SceneController.CurrentScene = CurrentDialogue.NextScene;
     }

@@ -99,8 +99,11 @@ public class SchoolCore : MonoBehaviour, I_Dialogue
         foreach (char c in ModifiedDialogue)
         {
             SchoolDialogueTMP.text += c;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.025f);
         }
+
+        if (GameManager.Instance.CurrentEarthquakeDialogue.ThisDialogueType == DialogueData.DialogueType.ENDING_SUCCESS)
+            SchoolDialogueContainer.SetActive(false);
 
         //  Process what needs to be done after the dialogue is done being displayed
         if (GameManager.Instance.CurrentEarthquakeDialogue.ThisDialogueType == DialogueData.DialogueType.TALKING)
@@ -156,15 +159,24 @@ public class SchoolCore : MonoBehaviour, I_Dialogue
                 currentCoroutine = StartCoroutine(PlayDialogueText());
                 break;
             case DialogueData.DialogueType.ENDING_SUCCESS:
-                if (GameManager.Instance.FinishedCalamities.Count == 2)
-                {
-                    GameManager.Instance.FinishedCalamities.Clear();
-                    GameManager.Instance.SceneController.CurrentScene = "MainMenuScene";
-                }
-                else
-                    GameManager.Instance.SceneController.CurrentScene = "LobbyScene";
+                LoadSuccessScene();
                 break;
         }
+    }
+
+    private void LoadSuccessScene()
+    {
+        if (alreadySelected) return;
+        alreadySelected = true;
+
+        GameManager.Instance.CurrentCalamity = GameManager.Calamity.NONE;
+        if (GameManager.Instance.FinishedCalamities.Count == 2)
+        {
+            GameManager.Instance.FinishedCalamities.Clear();
+            GameManager.Instance.SceneController.CurrentScene = "MainMenuScene";
+        }
+        else
+            GameManager.Instance.SceneController.CurrentScene = "LobbyScene";
     }
 
     public void MakeChoice(int choice)

@@ -66,6 +66,7 @@ public class StairsGameCore : MonoBehaviour, I_MiniGame
 
     public void InitializeScene()
     {
+        Player.SetActive(true);
         DialogueContainer.SetActive(true);
         ToggleStartGame(false);
         LeftBtn.gameObject.SetActive(false);

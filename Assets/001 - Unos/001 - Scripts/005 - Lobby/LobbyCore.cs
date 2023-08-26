@@ -62,7 +62,7 @@ public class LobbyCore : MonoBehaviour, I_Dialogue
         foreach (char c in ModifiedDialogue)
         {
             LobbyDialogueTMP.text += c;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.025f);
         }
 
         DialogueFinished = true;

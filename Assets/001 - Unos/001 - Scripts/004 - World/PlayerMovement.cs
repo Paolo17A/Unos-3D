@@ -67,11 +67,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         anim.SetBool("isWalking", speed > 0);
-    }
 
-    public void InitializePlayer(WorldCore worldCore, Joystick joystick)
-    {
-        WorldCore = worldCore;
-        this.joystick = joystick;
+        if(!controller.isGrounded)
+            controller.Move(Vector3.down * 9.8f * Time.deltaTime);
+        //transform.position = new Vector3(transform.position.x, 0.3f, transform.position.z);
     }
 }

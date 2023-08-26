@@ -2090,7 +2090,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1366107065}
         m_TargetAssemblyTypeName: StairsGameCore, Assembly-CSharp
-        m_MethodName: InitializeScene
+        m_MethodName: RetryGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -10,7 +10,7 @@ public class FreelookHandler : MonoBehaviour
 
     private void Update()
     {
-        freeLookCamera.m_XAxis.m_InputAxisValue = lookStick.Horizontal;
-        freeLookCamera.m_YAxis.m_InputAxisValue = lookStick.Vertical;
+        freeLookCamera.m_XAxis.m_InputAxisValue = lookStick.Horizontal * 0.5f;
+        freeLookCamera.m_YAxis.m_InputAxisValue = lookStick.Vertical * 0.5f;
     }
 }

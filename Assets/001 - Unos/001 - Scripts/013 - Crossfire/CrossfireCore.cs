@@ -58,13 +58,12 @@ public class CrossfireCore : MonoBehaviour, I_MiniGame
 
     [Header("FAILURE VARIABLES")]
     [SerializeField] private Button RetryBtn;
-
-
     //======================================================================================================================
     #endregion
 
     public void InitializeScene()
     {
+        Player.SetActive(true);
         DialogueContainer.SetActive(true);
         ToggleStartGame(false);
         MovementStick.gameObject.SetActive(false);

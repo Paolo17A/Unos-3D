@@ -8,7 +8,7 @@ public class WorldController : MonoBehaviour
 
     private void Awake()
     {
-        GameManager.Instance.MainCamera.clearFlags = CameraClearFlags.Skybox;
+        //GameManager.Instance.MainCamera.clearFlags = CameraClearFlags.Skybox;
         GameManager.Instance.SceneController.ActionPass = true;
     }
 
