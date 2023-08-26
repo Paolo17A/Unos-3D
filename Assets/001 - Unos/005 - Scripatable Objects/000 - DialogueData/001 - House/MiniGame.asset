@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MiniGame
   m_EditorClassIdentifier: 
   <ThisDialogueType>k__BackingField: 5
-  <DialogueContent>k__BackingField: Select all the supplies available
+  <DialogueContent>k__BackingField: Select all the supplies available.
   <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: 7685a17d0b61b4f48a15231efb62c8af,
     type: 3}
   <DialogueBackgroundFemale>k__BackingField: {fileID: 21300000, guid: 7685a17d0b61b4f48a15231efb62c8af,
@@ -27,6 +27,7 @@ MonoBehaviour:
     type: 3}
   <ThirdPartyLocation>k__BackingField: {x: -2.7, y: 0.93, z: 0}
   <HasExtraSprite>k__BackingField: 0
+  <WillDisplayBoat>k__BackingField: 0
   <MustShowSelectables>k__BackingField: 0
   <NextDialogue>k__BackingField: {fileID: 0}
   <OptionDialogues>k__BackingField: []

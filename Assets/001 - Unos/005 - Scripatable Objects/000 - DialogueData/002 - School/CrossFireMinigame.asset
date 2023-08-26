@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CrossFireMinigame
   m_EditorClassIdentifier: 
   <ThisDialogueType>k__BackingField: 5
-  <DialogueContent>k__BackingField: Avoid burning debris and reach the exit.
+  <DialogueContent>k__BackingField: Avoid all the burning debris and reach the exit.
   <DialogueBackgroundMale>k__BackingField: {fileID: 0}
   <DialogueBackgroundFemale>k__BackingField: {fileID: 0}
   <AddedMale>k__BackingField: {fileID: 0}

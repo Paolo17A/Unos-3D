@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: HousePortal
   m_EditorClassIdentifier: 
   <IsAccomplised>k__BackingField: 0
-  <ZoneName>k__BackingField: your house?
+  <ZoneName>k__BackingField: your house
   <SceneName>k__BackingField: HouseScene
   <ItemsToGet>k__BackingField: 

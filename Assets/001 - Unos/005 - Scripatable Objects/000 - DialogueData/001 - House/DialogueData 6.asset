@@ -15,7 +15,7 @@ MonoBehaviour:
   <ThisDialogueType>k__BackingField: 1
   <DialogueContent>k__BackingField: The flood reaches an estimation of 3m above sea
     level and you need to stay at roof top. You call for help and wait for several
-    hours
+    hours.
   <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: 745f1910442bb1d469688bad08da8074,
     type: 3}
   <DialogueBackgroundFemale>k__BackingField: {fileID: 21300000, guid: 745f1910442bb1d469688bad08da8074,
@@ -29,6 +29,7 @@ MonoBehaviour:
     type: 3}
   <ThirdPartyLocation>k__BackingField: {x: -7.06, y: -1.18, z: 0}
   <HasExtraSprite>k__BackingField: 1
+  <WillDisplayBoat>k__BackingField: 0
   <MustShowSelectables>k__BackingField: 0
   <NextDialogue>k__BackingField: {fileID: 11400000, guid: ea7e515338e125642a4adf1116540625,
     type: 2}

@@ -109,7 +109,7 @@ public class HouseCore : MonoBehaviour, I_Dialogue
         foreach (char c in ModifiedDialogue)
         {
             HouseDialogueTMP.text += c;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.025f);
         }
 
         //  Activate and deactivate some visuals as needed

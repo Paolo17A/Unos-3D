@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: StayBehind
   m_EditorClassIdentifier: 
   <ThisDialogueType>k__BackingField: 4
-  <DialogueContent>k__BackingField: 'There was a damaged beam beside you and knocked
+  <DialogueContent>k__BackingField: 'There was a damaged beam beside you and it knocked
     you down. '
   <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: 335d0280f751da5429a323308aa3427c,
     type: 3}

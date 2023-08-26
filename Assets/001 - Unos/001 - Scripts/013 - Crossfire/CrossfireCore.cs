@@ -78,7 +78,7 @@ public class CrossfireCore : MonoBehaviour, I_MiniGame
         foreach (char c in GameManager.Instance.CurrentEarthquakeDialogue.DialogueContent)
         {
             DialogueTMP.text += c;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.025f);
         }
         StartGame.SetActive(true);
         DialogueFinished = true;
