@@ -39,6 +39,9 @@ public class WorldCore : MonoBehaviour
     [Header("PLAYER VARIABLES")]
     [SerializeField] private GameObject PlayerCharacter;
 
+    [Header("AUDIO")]
+    [SerializeField] private AudioClip WorldBackgroundMusic;
+
     //=================================================================================================
 
     #region SETTINGS
@@ -69,6 +72,7 @@ public class WorldCore : MonoBehaviour
     #region QUESTS
     public void InitializeQuests()
     {
+        GameManager.Instance.AudioManager.SetBackgroundMusic(WorldBackgroundMusic);
         if(GameManager.Instance.CurrentCalamity == GameManager.Calamity.TYPHOON)
         {
             MainQuestContainer.SetOptionText("Go back to your house.");
@@ -200,6 +204,7 @@ public class WorldCore : MonoBehaviour
         GameManager.Instance.CurrentQuest = EnteredZone.QuestData;
         if (EnteredZone.QuestData.SceneName == "SchoolScene")
             GameManager.Instance.CurrentEarthquakeDialogue = StartingSchoolDialogue;
+
         GameManager.Instance.SceneController.CurrentScene = EnteredZone.QuestData.SceneName;
     }
     #endregion

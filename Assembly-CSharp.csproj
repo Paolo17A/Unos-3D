@@ -101,6 +101,7 @@
     <Compile Include="Assets\001 - Unos\001 - Scripts\003 - Gender Select\GenderSelectCore.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\000 - GameManager\AnimationsLT.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\000 - GameManager\SettingsManager.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\005 - Lobby\LobbyCore.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\LogoCinematic.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralCameraShake.cs" />
@@ -112,6 +113,7 @@
     <Compile Include="Assets\000 - URP\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\000 - GameManager\AudioManager.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\007 - Interfaces\I_Dialogue.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralAdvancedTechniques.cs" />
     <Compile Include="Assets\ReadOnlyAttribute\Scripts\ReadOnlyAttribute.cs" />
@@ -137,6 +139,7 @@
     <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\008 - Store\DisplayedItemHandler.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\000 - GameManager\APIClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ReadOnlyAttribute\README.txt" />

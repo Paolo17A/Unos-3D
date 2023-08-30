@@ -36,6 +36,7 @@ MonoBehaviour:
   <OptionContent>k__BackingField:
   - Run to the exit
   - Get underneath a table in your classroom
+  <ScenarioIndex>k__BackingField: 4
   <NextScene>k__BackingField: 
   <EndingTrivia>k__BackingField: 
   <SavePointDialogue>k__BackingField: {fileID: 0}

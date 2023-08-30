@@ -29,6 +29,7 @@ public class DialogueData : ScriptableObject
     [field: Header("CHOOSE VARIABLES")]
     [field: SerializeField] public List<DialogueData> OptionDialogues { get; set; }
     [field: SerializeField][field: TextArea(minLines: 2, maxLines: 5)] public List<string> OptionContent { get; set; }
+    [field: SerializeField] public string ScenarioIndex { get; set; }
 
     [field: Header("ENDING SUCCESS VARIABLES")]
     [field: SerializeField] public string NextScene { get; set; }

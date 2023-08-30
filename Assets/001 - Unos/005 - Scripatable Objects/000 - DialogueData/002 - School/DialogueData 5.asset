@@ -36,6 +36,7 @@ MonoBehaviour:
   <OptionContent>k__BackingField:
   - Stay
   - Go with the others
+  <ScenarioIndex>k__BackingField: 5
   <NextScene>k__BackingField: 
   <EndingTrivia>k__BackingField: 
   <SavePointDialogue>k__BackingField: {fileID: 0}

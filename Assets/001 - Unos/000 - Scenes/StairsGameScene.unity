@@ -3663,6 +3663,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StairsGameCore: {fileID: 1366107065}
+  Ouch: {fileID: 8300000, guid: 812d7d32a1cd2ae428ed06ac2e2c7528, type: 3}
+  Yay: {fileID: 8300000, guid: 98befad25122c5a47b927fc08bae0bba, type: 3}
 --- !u!114 &1366107065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3701,6 +3703,7 @@ MonoBehaviour:
   RightBtn: {fileID: 1142491813}
   Player: {fileID: 1459948800}
   RetryBtn: {fileID: 734696847}
+  GameBackgroundMusic: {fileID: 8300000, guid: b9b5d29ccdc33f14faac5d7a0411e9bb, type: 3}
 --- !u!4 &1366107066
 Transform:
   m_ObjectHideFlags: 0

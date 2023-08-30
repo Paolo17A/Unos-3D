@@ -38,6 +38,7 @@ MonoBehaviour:
   <OptionContent>k__BackingField:
   - Yes, sir! Thank you!
   - No, sir I guess I'll just go home.
+  <ScenarioIndex>k__BackingField: 3
   <NextScene>k__BackingField: 
   <EndingTrivia>k__BackingField: 
   <SavePointDialogue>k__BackingField: {fileID: 0}

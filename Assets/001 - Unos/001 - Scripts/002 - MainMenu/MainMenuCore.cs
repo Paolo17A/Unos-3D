@@ -53,6 +53,9 @@ public class MainMenuCore : MonoBehaviour
     [SerializeField] private CanvasGroup SettingsCG;
     [SerializeField] private RectTransform QuitRT;
     [SerializeField] private CanvasGroup QuitCG;
+
+    [Header("AUDIO")]
+    [SerializeField] private AudioClip BackgroundMusic;
     //=============================================================================================================
     #endregion
 
@@ -117,11 +120,22 @@ public class MainMenuCore : MonoBehaviour
     }
     #endregion
 
+    public void InitializeBackgroundMusic()
+    {
+        GameManager.Instance.AudioManager.SetBackgroundMusic(BackgroundMusic);
+    }
+
     public void GoToGenderSelectScene()
     {
+        GameManager.Instance.AudioManager.KillBackgroundMusic();
         if(GameManager.Instance.CurrentCalamity == GameManager.Calamity.NONE)
             GameManager.Instance.SceneController.CurrentScene = "GenderSelectScene";
         else
             GameManager.Instance.SceneController.CurrentScene = "WorldScene";
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

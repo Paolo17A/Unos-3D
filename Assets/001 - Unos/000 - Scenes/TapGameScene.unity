@@ -577,6 +577,7 @@ MonoBehaviour:
   StartingPoint: {fileID: 1795587882}
   EndingPoint: {fileID: 1695317052}
   movingTowardsEnd: 1
+  GameBackgroundMusic: {fileID: 8300000, guid: b9b5d29ccdc33f14faac5d7a0411e9bb, type: 3}
 --- !u!1 &466509667
 GameObject:
   m_ObjectHideFlags: 0

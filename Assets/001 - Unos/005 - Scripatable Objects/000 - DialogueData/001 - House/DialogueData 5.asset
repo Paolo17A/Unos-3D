@@ -26,6 +26,7 @@ MonoBehaviour:
   <ThirdPartySprite>k__BackingField: {fileID: 0}
   <ThirdPartyLocation>k__BackingField: {x: 0, y: 0, z: 0}
   <HasExtraSprite>k__BackingField: 0
+  <WillDisplayBoat>k__BackingField: 0
   <MustShowSelectables>k__BackingField: 0
   <NextDialogue>k__BackingField: {fileID: 0}
   <OptionDialogues>k__BackingField:
@@ -34,6 +35,7 @@ MonoBehaviour:
   <OptionContent>k__BackingField:
   - 'Go now to Evacuation Centre '
   - Go to the roof, call for help, and wait for them to arrive
+  <ScenarioIndex>k__BackingField: 2
   <NextScene>k__BackingField: 
   <EndingTrivia>k__BackingField: 
   <SavePointDialogue>k__BackingField: {fileID: 0}

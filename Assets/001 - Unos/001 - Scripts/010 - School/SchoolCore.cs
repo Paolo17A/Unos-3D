@@ -35,6 +35,7 @@ public class SchoolCore : MonoBehaviour, I_Dialogue
 
     public void PlayStartingDialogue()
     {
+        GameManager.Instance.AudioManager.KillBackgroundMusic();
         currentCoroutine = StartCoroutine(PlayDialogueText());
     }
 
@@ -182,6 +183,7 @@ public class SchoolCore : MonoBehaviour, I_Dialogue
     public void MakeChoice(int choice)
     {
         SelectedChoiceIndex = choice;
+        StartCoroutine(GameManager.Instance.APIClient.MakeDisasterChoice(GameManager.Instance.CurrentEarthquakeDialogue.ScenarioIndex, GameManager.Instance.PlayerGender == GameManager.Gender.MALE ? "male" : "female", SelectedChoiceIndex == 0 ? "a" : "b"));
         foreach (GameObject option in Options)
             option.SetActive(false);
         LoadNextDialogue();

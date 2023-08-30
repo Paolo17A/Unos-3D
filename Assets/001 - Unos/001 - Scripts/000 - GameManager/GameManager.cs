@@ -52,6 +52,8 @@ public class GameManager : MonoBehaviour
     [field: Header("MISCELLANEOUS SCRIPTS")]
     [field: SerializeField] public SceneController SceneController { get; set; }
     [field: SerializeField] public AnimationsLT AnimationsLT { get; set; }
+    [field: SerializeField] public AudioManager AudioManager { get; set; }
+    [field: SerializeField] public APIClient APIClient { get; set; }
 
     [field: Header("LOADING")]
     [field: SerializeField] public GameObject LoadingPanel { get; set; }

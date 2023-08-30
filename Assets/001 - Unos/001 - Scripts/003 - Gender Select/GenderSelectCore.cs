@@ -67,6 +67,7 @@ public class GenderSelectCore : MonoBehaviour
 
         GameManager.Instance.PlayerGender = SelectedGender;
         GameManager.Instance.Username = UsernameTMPInput.text;
+        StartCoroutine(GameManager.Instance.APIClient.AddUser(GameManager.Instance.PlayerGender == GameManager.Gender.MALE ? "male": "female"));
         GameManager.Instance.SceneController.CurrentScene = "LobbyScene";
     }
     #endregion

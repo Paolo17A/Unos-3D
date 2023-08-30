@@ -20,6 +20,7 @@ public class MainMenuController : MonoBehaviour
     private void Start()
     {
         MainMenuCore.CurrentMainMenuState = MainMenuCore.MainMenuStates.MAINMENU;
+        MainMenuCore.InitializeBackgroundMusic();
     }
 
     private void MainMenuStateChange(object sender, EventArgs e)

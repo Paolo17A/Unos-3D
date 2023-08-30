@@ -6,7 +6,8 @@ using UnityEngine;
 public class StairsGameController : MonoBehaviour
 {
     [SerializeField] private StairsGameCore StairsGameCore;
-
+    [SerializeField] private AudioClip Ouch;
+    [SerializeField] private AudioClip Yay;
     private void Awake()
     {
         StairsGameCore.onStairsGameStateChange += StairsGameStateChange;
@@ -34,9 +35,11 @@ public class StairsGameController : MonoBehaviour
                 StairsGameCore.HandleMovement();
                 break;
             case StairsGameCore.StairsGameStates.STONED:
+                GameManager.Instance.AudioManager.PlayAudioClip(Ouch);
                 StairsGameCore.HandleFailure();
                 break;
             case StairsGameCore.StairsGameStates.SAFE:
+                GameManager.Instance.AudioManager.PlayAudioClip(Yay);
                 StairsGameCore.HandleSuccess();
                 break;
         }

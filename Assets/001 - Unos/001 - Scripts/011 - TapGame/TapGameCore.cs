@@ -64,6 +64,10 @@ public class TapGameCore : MonoBehaviour, I_MiniGame
     [SerializeField] private Transform EndingPoint;
     [SerializeField][ReadOnly] private bool movingTowardsEnd = true;
 
+    [Header("AUDIO")]
+    [SerializeField] private AudioClip GameBackgroundMusic;
+
+
     Coroutine currentCoroutine;
     bool alreadyPressed;
     //======================================================================================================================
@@ -71,6 +75,7 @@ public class TapGameCore : MonoBehaviour, I_MiniGame
 
     public void InitializeScene()
     {
+        GameManager.Instance.AudioManager.SetBackgroundMusic(GameBackgroundMusic);
         if (GameManager.Instance.PlayerGender == GameManager.Gender.MALE)
             PlayerSprite.sprite = GameManager.Instance.CurrentEarthquakeDialogue.AddedMale;
         else if (GameManager.Instance.PlayerGender == GameManager.Gender.FEMALE)

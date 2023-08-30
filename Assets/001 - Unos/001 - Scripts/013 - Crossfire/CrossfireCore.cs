@@ -58,11 +58,15 @@ public class CrossfireCore : MonoBehaviour, I_MiniGame
 
     [Header("FAILURE VARIABLES")]
     [SerializeField] private Button RetryBtn;
+
+    [Header("AUDIO")]
+    [SerializeField] private AudioClip GameBackgroundMusic;
     //======================================================================================================================
     #endregion
 
     public void InitializeScene()
     {
+        GameManager.Instance.AudioManager.SetBackgroundMusic(GameBackgroundMusic);
         Player.SetActive(true);
         DialogueContainer.SetActive(true);
         ToggleStartGame(false);

@@ -36,6 +36,7 @@ MonoBehaviour:
   <OptionContent>k__BackingField:
   - Stay at home
   - Go to Evacuation Center
+  <ScenarioIndex>k__BackingField: 1
   <NextScene>k__BackingField: 
   <EndingTrivia>k__BackingField: 
   <SavePointDialogue>k__BackingField: {fileID: 0}

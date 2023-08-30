@@ -44,6 +44,7 @@ public class HouseCore : MonoBehaviour, I_Dialogue
     #region DIALOGUE
     public void PlayStartingDialogue()
     {
+        GameManager.Instance.AudioManager.KillBackgroundMusic();
         CurrentDialogue = StartingDialogue;
         if (GameManager.Instance.DebugMode)
             GameManager.Instance.PlayerGender = GameManager.Gender.FEMALE;
@@ -214,10 +215,14 @@ public class HouseCore : MonoBehaviour, I_Dialogue
     public void MakeChoice(int choice)
     {
         SelectedChoiceIndex = choice;
+        StartCoroutine(GameManager.Instance.APIClient.MakeDisasterChoice(CurrentDialogue.ScenarioIndex, GameManager.Instance.PlayerGender == GameManager.Gender.MALE ? "male" : "female", SelectedChoiceIndex == 0 ? "a" : "b"));
         foreach (GameObject option in Options)
             option.SetActive(false);
         LoadNextDialogue();
     }
+
+
+    
 
     private void LoadSuccessScene()
     {
