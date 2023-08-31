@@ -123,6 +123,7 @@
     <Compile Include="Assets\001 - Unos\001 - Scripts\001 - Camera\CanvasUICameraSetter.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\004 - World\MouseLook.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineTrack.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\000 - GameManager\APIClient.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\013 - Crossfire\CrossfireCore.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
@@ -139,7 +140,6 @@
     <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\008 - Store\DisplayedItemHandler.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
-    <Compile Include="Assets\001 - Unos\001 - Scripts\000 - GameManager\APIClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ReadOnlyAttribute\README.txt" />

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -11,23 +12,35 @@ public class APIClient : MonoBehaviour
     {
         string url = baseURL + "/usercount/create";
 
-        WWWForm form = new WWWForm();
-        form.AddField("gender", gender);
+        GenderSelect selectedGender = new GenderSelect(gender);
+        string json = JsonUtility.ToJson(selectedGender);
 
-        using (WWW www = new WWW(url, form))
+        var request = new UnityWebRequest(url, "POST");
+        byte[] bodyRaw = Encoding.UTF8.GetBytes(json);
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+
+        string completeURL = request.url + "?" + Encoding.UTF8.GetString(bodyRaw);
+        Debug.Log("Complete URL with Headers: " + completeURL);
+
+        yield return request.SendWebRequest();
+        //ApiResponse response = JsonUtility.FromJson<ApiResponse>(request.downloadHandler.text);
+        Debug.Log("Message:" + request.downloadHandler.text);
+
+        if(request.error != null)
         {
-            yield return www;
+            Debug.Log("no errors found");
+        }
 
-            if (string.IsNullOrEmpty(www.error))
-            {
-                ApiResponse response = JsonUtility.FromJson<ApiResponse>(www.text);
-                Debug.Log("Add User API Response: " + response.message);
-            }
-            else
-            {
-                Debug.LogError("Add User API Error: " + www.error);
-                GameManager.Instance.DisplayErrorPanel("Add user API Error: " + www.error);
-            }
+        if (request.result != UnityWebRequest.Result.Success)
+        {
+            GameManager.Instance.DisplayErrorPanel(request.error);
+            Debug.Log(request.error);
+        }
+        else
+        {
+            Debug.Log("gender form upload complete");
         }
     }
 
@@ -36,25 +49,30 @@ public class APIClient : MonoBehaviour
     {
         string url = baseURL + "/disaster/create";
 
-        WWWForm form = new WWWForm();
-        form.AddField("scenario", scenario);
-        form.AddField("gender", gender);
-        form.AddField("choice", choice);
+        ScenarioSelect scenarioSelect = new ScenarioSelect(scenario, gender, choice);
+        string json = JsonUtility.ToJson(scenarioSelect);
 
-        using (WWW www = new WWW(url, form))
+        var request = new UnityWebRequest(url, "POST");
+        byte[] bodyRaw = Encoding.UTF8.GetBytes(json);
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+
+        string completeURL = request.url + "?" + Encoding.UTF8.GetString(bodyRaw);
+        Debug.Log("Complete URL with Headers: " + completeURL);
+
+        yield return request.SendWebRequest();
+
+        Debug.Log("Message:" + request.downloadHandler.text);
+
+        if (request.result != UnityWebRequest.Result.Success)
         {
-            yield return www;
-
-            if (string.IsNullOrEmpty(www.error))
-            {
-                ApiResponse response = JsonUtility.FromJson<ApiResponse>(www.text);
-                Debug.Log("Disaster Choice API Response: " + response.message);
-            }
-            else
-            {
-                Debug.LogError("Disaster Choice API Error: " + www.error);
-                GameManager.Instance.DisplayErrorPanel("Disaster Choice API Error: " + www.error);
-            }
+            GameManager.Instance.DisplayErrorPanel(request.error);
+            Debug.Log(request.error);
+        }
+        else
+        {
+            Debug.Log("scenario form upload complete");
         }
     }
 }
@@ -63,4 +81,28 @@ public class APIClient : MonoBehaviour
 public class ApiResponse
 {
     public string message;
+}
+
+public class GenderSelect
+{
+    public string gender;
+
+    public GenderSelect(string gender)
+    {
+        this.gender = gender;
+    }
+}
+
+public class ScenarioSelect
+{
+    public string scenario;
+    public string gender;
+    public string choice;
+
+    public ScenarioSelect(string scenario, string gender, string choice)
+    {
+        this.scenario = scenario;
+        this.gender = gender;
+        this.choice = choice;
+    }
 }
