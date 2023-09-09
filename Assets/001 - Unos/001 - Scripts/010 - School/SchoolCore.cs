@@ -36,12 +36,17 @@ public class SchoolCore : MonoBehaviour, I_Dialogue
     public void PlayStartingDialogue()
     {
         GameManager.Instance.AudioManager.KillBackgroundMusic();
+        
         currentCoroutine = StartCoroutine(PlayDialogueText());
     }
 
     public IEnumerator PlayDialogueText()
     {
         DialogueFinished = false;
+        if (GameManager.Instance.CurrentEarthquakeDialogue.ExtraAudio != null)
+        {
+            GameManager.Instance.AudioManager.SetBackgroundMusic(GameManager.Instance.CurrentEarthquakeDialogue.ExtraAudio);
+        }
 
         #region VISUALS AND UI INITIALIZATION
         //  Hide UI Panels as soon as this coroutine starts. We can activate what we need later
@@ -103,8 +108,8 @@ public class SchoolCore : MonoBehaviour, I_Dialogue
             yield return new WaitForSeconds(0.025f);
         }
 
-        if (GameManager.Instance.CurrentEarthquakeDialogue.ThisDialogueType == DialogueData.DialogueType.ENDING_SUCCESS)
-            SchoolDialogueContainer.SetActive(false);
+        /*if (GameManager.Instance.CurrentEarthquakeDialogue.ThisDialogueType == DialogueData.DialogueType.ENDING_SUCCESS)
+            SchoolDialogueContainer.SetActive(false);*/
 
         //  Process what needs to be done after the dialogue is done being displayed
         if (GameManager.Instance.CurrentEarthquakeDialogue.ThisDialogueType == DialogueData.DialogueType.TALKING)
@@ -171,6 +176,7 @@ public class SchoolCore : MonoBehaviour, I_Dialogue
         alreadySelected = true;
 
         GameManager.Instance.CurrentCalamity = GameManager.Calamity.NONE;
+        GameManager.Instance.AudioManager.KillBackgroundMusic();
         if (GameManager.Instance.FinishedCalamities.Count == 2)
         {
             GameManager.Instance.FinishedCalamities.Clear();
@@ -178,6 +184,9 @@ public class SchoolCore : MonoBehaviour, I_Dialogue
         }
         else
             GameManager.Instance.SceneController.CurrentScene = "LobbyScene";
+
+        foreach (QuestData quest in GameManager.Instance.TyphoonQuests)
+            quest.IsAccomplised = false;
     }
 
     public void MakeChoice(int choice)

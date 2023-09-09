@@ -21,6 +21,7 @@ public class StairsGameController : MonoBehaviour
 
     private void Start()
     {
+        gameObject.GetComponent<AudioSource>().volume = GameManager.Instance.AudioManager.GetBGMVolume();
         StairsGameCore.CurrentStairsGameState = StairsGameCore.StairsGameStates.INSTRUCTION;
     }
 

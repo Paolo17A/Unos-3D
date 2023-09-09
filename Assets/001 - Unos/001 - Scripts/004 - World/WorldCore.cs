@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class WorldCore : MonoBehaviour
@@ -58,6 +59,19 @@ public class WorldCore : MonoBehaviour
     public bool IsSettingsOpen()
     {
         return SettingsPanel.activeInHierarchy;
+    }
+
+    public void SaveGameState()
+    {
+        GameManager.Instance.CurrentSaveData.PlayerWorldPos = PlayerCharacter.transform.position;
+        GameManager.Instance.CurrentSaveData.PlayerGender = GameManager.Instance.PlayerGender;
+        GameManager.Instance.CurrentSaveData.CurrentScene = GameManager.Instance.SceneController.CurrentScene;
+        GameManager.Instance.CurrentSaveData.CurrentCalamity = GameManager.Instance.CurrentCalamity;
+        GameManager.Instance.CurrentSaveData.AccomplishedCalamities = GameManager.Instance.FinishedCalamities;
+        GameManager.Instance.CurrentSaveData.DoneWithDrugstore = DrugstoreQuest.IsAccomplised;
+        GameManager.Instance.CurrentSaveData.DoneWithHardwareStore = HardwareStoreQuest.IsAccomplised;
+        GameManager.Instance.CurrentSaveData.DoneWithMarket = MarketQuest.IsAccomplised;
+        GameManager.Instance.CurrentSaveData.SaveThisData();
     }
 
     public void ReturnToMainMenu()

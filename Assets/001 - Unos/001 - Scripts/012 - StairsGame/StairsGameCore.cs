@@ -109,17 +109,29 @@ public class StairsGameCore : MonoBehaviour, I_MiniGame
     //  We'll make use of this implementation for the spawning of debris
     public void HandleMovement()
     {
-        InvokeRepeating("SpawnDebris", 1, 2);
+        InvokeRepeating("SpawnDebris", 1, 1f);
     }
 
     private void SpawnDebris()
     {
-        int randomPoint = UnityEngine.Random.Range(0, DebrisSpawnPoints.Count);
-        Instantiate(DebrisPrefab, DebrisSpawnPoints[randomPoint].transform.position, Quaternion.identity);
+        for(int i = 0; i < 3; i++)
+        {
+            int randomPoint = UnityEngine.Random.Range(0, DebrisSpawnPoints.Count);
+            Instantiate(DebrisPrefab, DebrisSpawnPoints[randomPoint].transform.position, Quaternion.identity);
+        }
     }
 
     public void HandleSuccess()
     {
+        LeftBtn.gameObject.SetActive(false);
+        RightBtn.gameObject.SetActive(false);
+        Player.SetActive(false);
+        StartCoroutine(SuccessCoroutine());
+    }
+
+    private IEnumerator SuccessCoroutine()
+    {
+        yield return new WaitForSeconds(4);
         GameManager.Instance.CurrentEarthquakeDialogue = GameManager.Instance.CurrentEarthquakeDialogue.ReturningPointDialogue;
         GameManager.Instance.SceneController.CurrentScene = "SchoolScene";
     }

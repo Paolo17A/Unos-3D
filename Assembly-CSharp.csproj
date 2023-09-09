@@ -125,6 +125,7 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineTrack.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\000 - GameManager\APIClient.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\013 - Crossfire\CrossfireCore.cs" />
+    <Compile Include="Assets\001 - Unos\001 - Scripts\006 - Scriptable Object\002 - Save\SaveData.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
     <Compile Include="Assets\001 - Unos\001 - Scripts\010 - School\SchoolController.cs" />

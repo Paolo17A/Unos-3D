@@ -45,6 +45,10 @@ public class GameManager : MonoBehaviour
     [field: SerializeField] public List<QuestData> TyphoonQuests { get; set; }
     [field: SerializeField] public DialogueData CurrentEarthquakeDialogue { get; set; }
 
+    [field: Header("SAVE VARIABLES")]
+    [field: SerializeField][field: ReadOnly] public SaveData CurrentSaveData { get; set; }
+    [field: SerializeField] public List<SaveData> SaveFiles { get; set; }
+
     [field: Header("CAMERA")]
     [field: SerializeField] public Camera MainCamera { get; set; }
     [field: SerializeField] public Camera MyUICamera { get; set; }
@@ -88,6 +92,11 @@ public class GameManager : MonoBehaviour
         {
             quest.IsAccomplised = false;
             quest.ItemsToGet.Clear();
+        }
+
+        foreach(SaveData saveData in SaveFiles)
+        {
+
         }
     }
     #endregion

@@ -24,6 +24,8 @@ MonoBehaviour:
   <AddedFemale>k__BackingField: {fileID: 21300000, guid: 1fc9a848d6c52df4bb37779794dad25c,
     type: 3}
   <AddedLocation>k__BackingField: {x: -7.48, y: -2.3, z: 0}
+  <ExtraAudio>k__BackingField: {fileID: 8300000, guid: a6dd85fd1e1eb09419f481600b7d6925,
+    type: 3}
   <ThirdPartySprite>k__BackingField: {fileID: 0}
   <ThirdPartyLocation>k__BackingField: {x: 0, y: 0, z: 0}
   <HasExtraSprite>k__BackingField: 0

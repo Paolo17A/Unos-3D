@@ -35,7 +35,7 @@ public class APIClient : MonoBehaviour
 
         if (request.result != UnityWebRequest.Result.Success)
         {
-            GameManager.Instance.DisplayErrorPanel(request.error);
+            GameManager.Instance.DisplayErrorPanel("Please reconnect to the internet");
             Debug.Log(request.error);
         }
         else
@@ -68,7 +68,7 @@ public class APIClient : MonoBehaviour
         if (request.result != UnityWebRequest.Result.Success)
         {
             GameManager.Instance.DisplayErrorPanel(request.error);
-            Debug.Log(request.error);
+            Debug.Log("Please reconnect to the internet");
         }
         else
         {

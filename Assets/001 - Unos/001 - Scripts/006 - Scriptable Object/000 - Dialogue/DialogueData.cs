@@ -15,6 +15,7 @@ public class DialogueData : ScriptableObject
     [field: SerializeField] public Sprite AddedMale { get; set; }
     [field: SerializeField] public Sprite AddedFemale { get; set; }
     [field: SerializeField] public Vector3 AddedLocation { get; set; }
+    [field: SerializeField] public AudioClip ExtraAudio { get; set; }
 
     [field: Header("THIRD PARTY VISUALS")]
     [field: SerializeField] public Sprite ThirdPartySprite { get; set; }

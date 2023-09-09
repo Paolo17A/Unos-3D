@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ThisDialogueType>k__BackingField: 4
   <DialogueContent>k__BackingField: You are knocked down by falling debris
-  <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: 9f3e2d9b622825740aebb49e45337324,
+  <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: 74a192a4818b7af47a23b7898291c093,
     type: 3}
-  <DialogueBackgroundFemale>k__BackingField: {fileID: 21300000, guid: 9f3e2d9b622825740aebb49e45337324,
+  <DialogueBackgroundFemale>k__BackingField: {fileID: 21300000, guid: 74a192a4818b7af47a23b7898291c093,
     type: 3}
   <AddedMale>k__BackingField: {fileID: 21300000, guid: ad5c5132b76885e40bfdf7ce5267bd8d,
     type: 3}
@@ -32,6 +32,7 @@ MonoBehaviour:
   <NextDialogue>k__BackingField: {fileID: 0}
   <OptionDialogues>k__BackingField: []
   <OptionContent>k__BackingField: []
+  <ScenarioIndex>k__BackingField: 
   <NextScene>k__BackingField: 
   <EndingTrivia>k__BackingField: "During Earthquakes Don\u2019t go and run outside
     when you are indoor when the quake started. Wait until the shaking stops or when

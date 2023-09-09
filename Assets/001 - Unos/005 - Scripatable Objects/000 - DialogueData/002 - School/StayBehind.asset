@@ -15,9 +15,9 @@ MonoBehaviour:
   <ThisDialogueType>k__BackingField: 4
   <DialogueContent>k__BackingField: 'There was a damaged beam beside you and it knocked
     you down. '
-  <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: 335d0280f751da5429a323308aa3427c,
+  <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: 0205c6a85a6625c42855acb162eb5c54,
     type: 3}
-  <DialogueBackgroundFemale>k__BackingField: {fileID: 21300000, guid: 335d0280f751da5429a323308aa3427c,
+  <DialogueBackgroundFemale>k__BackingField: {fileID: 21300000, guid: 0205c6a85a6625c42855acb162eb5c54,
     type: 3}
   <AddedMale>k__BackingField: {fileID: 0}
   <AddedFemale>k__BackingField: {fileID: 0}
@@ -30,6 +30,7 @@ MonoBehaviour:
   <NextDialogue>k__BackingField: {fileID: 0}
   <OptionDialogues>k__BackingField: []
   <OptionContent>k__BackingField: []
+  <ScenarioIndex>k__BackingField: 
   <NextScene>k__BackingField: 
   <EndingTrivia>k__BackingField: "Carefully check your home\u2019s walls, floors,
     doors, windows, and staircases for damage. If you see structural damage, like

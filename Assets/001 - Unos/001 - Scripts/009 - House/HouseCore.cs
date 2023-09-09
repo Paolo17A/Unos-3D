@@ -36,6 +36,9 @@ public class HouseCore : MonoBehaviour, I_Dialogue
     [SerializeField] private TextMeshProUGUI TriviaPanelTMP;
     [SerializeField] private GameObject GameOverHeader;
 
+    [Header("BACKGROUND MUSIC")]
+    [SerializeField] private AudioClip Rain;
+
     Coroutine currentCoroutine;
     bool alreadySelected;
     //======================================================================================================================
@@ -45,6 +48,7 @@ public class HouseCore : MonoBehaviour, I_Dialogue
     public void PlayStartingDialogue()
     {
         GameManager.Instance.AudioManager.KillBackgroundMusic();
+        GameManager.Instance.AudioManager.SetBackgroundMusic(Rain);
         CurrentDialogue = StartingDialogue;
         if (GameManager.Instance.DebugMode)
             GameManager.Instance.PlayerGender = GameManager.Gender.FEMALE;
@@ -229,6 +233,7 @@ public class HouseCore : MonoBehaviour, I_Dialogue
         if (alreadySelected) return;
 
         alreadySelected = true;
+        GameManager.Instance.AudioManager.KillBackgroundMusic();
         GameManager.Instance.CurrentCalamity = GameManager.Calamity.NONE;
         if (GameManager.Instance.FinishedCalamities.Count == 2)
         {
@@ -237,6 +242,8 @@ public class HouseCore : MonoBehaviour, I_Dialogue
         }
         else
             GameManager.Instance.SceneController.CurrentScene = CurrentDialogue.NextScene;
+        foreach (QuestData quest in GameManager.Instance.TyphoonQuests)
+            quest.IsAccomplised = false;
     }
     #endregion
 

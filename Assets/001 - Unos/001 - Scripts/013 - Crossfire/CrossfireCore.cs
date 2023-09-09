@@ -108,6 +108,14 @@ public class CrossfireCore : MonoBehaviour, I_MiniGame
 
     public void HandleSuccess()
     {
+        MovementStick.gameObject.SetActive(false);
+        Player.SetActive(false);
+        StartCoroutine(SuccessCoroutine());
+    }
+
+    private IEnumerator SuccessCoroutine()
+    {
+        yield return new WaitForSeconds(4);
         GameManager.Instance.CurrentEarthquakeDialogue = GameManager.Instance.CurrentEarthquakeDialogue.ReturningPointDialogue;
         GameManager.Instance.SceneController.CurrentScene = "SchoolScene";
     }

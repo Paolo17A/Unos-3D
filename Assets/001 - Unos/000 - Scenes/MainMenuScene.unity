@@ -4219,8 +4219,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 27.988525, y: -12.722015}
-  m_SizeDelta: {x: -227.2201, y: -125.4441}
+  m_AnchoredPosition: {x: 24.8871, y: -15.823212}
+  m_SizeDelta: {x: -283.0424, y: -131.6465}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1769582944
 MonoBehaviour:
@@ -4242,7 +4242,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum yadda yadda yadda
+  m_text: 'Welcome to an exciting and educational gaming experience like no other
+    - "Understanding Natural and Human-Caused Hazards for Optimization of Safety
+    Measures." We''ve taken disaster awareness and preparedness to the next level
+    by combining immersive gameplay with essential knowledge to empower players to
+    become champions of safety.
+
+
+    Are you ready to embark on the journey to becoming
+    a disaster preparedness champion? Play our game, unlock the secrets of safety
+    optimization, and emerge as a true hero in times of crisis.
+
+    
+
+    Join
+    us in the quest for preparedness and embark on your adventure with "Understanding
+    Natural and Human-Caused Hazards for Optimization of Safety Measures." Let''s
+    make the world a safer place, one game at a time!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4251,8 +4267,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279785616
+  m_fontColor: {r: 0.5660378, g: 0.34681237, b: 0.09344962, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4276,8 +4292,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

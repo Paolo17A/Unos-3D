@@ -2939,6 +2939,7 @@ MonoBehaviour:
   TriviaPanel: {fileID: 941752313}
   TriviaPanelTMP: {fileID: 606619213}
   GameOverHeader: {fileID: 569445536}
+  Rain: {fileID: 8300000, guid: 90b35e5d4df3b8d429150f06ef3f9729, type: 3}
 --- !u!114 &1949263398
 MonoBehaviour:
   m_ObjectHideFlags: 0

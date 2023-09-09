@@ -1420,6 +1420,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8216d526af66117498779ceb621370dd, type: 2}
   <CurrentEarthquakeDialogue>k__BackingField: {fileID: 11400000, guid: 5012b7f4c115cd24a930b3a7e89a8577,
     type: 2}
+  <CurrentSaveData>k__BackingField: {fileID: 0}
+  <SaveFiles>k__BackingField:
+  - {fileID: 11400000, guid: 48cd823fa0bcf16488a3bef90a7fb0a1, type: 2}
+  - {fileID: 11400000, guid: 834e9e093751a06429cbf542580c327d, type: 2}
+  - {fileID: 11400000, guid: fd70e549f11d3c343babe495a8c955a9, type: 2}
+  - {fileID: 11400000, guid: 04b33a8dbede08d47985886c15bd1b93, type: 2}
   <MainCamera>k__BackingField: {fileID: 1879988193}
   <MyUICamera>k__BackingField: {fileID: 380094852}
   <SceneController>k__BackingField: {fileID: 458658884}
@@ -2089,11 +2095,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 30
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 45.12
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -2116,8 +2122,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879988191}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalRotation: {x: 0.04976596, y: 0.9243925, z: -0.12946582, w: 0.35533148}
+  m_LocalPosition: {x: 79.402306, y: 4.092, z: -116.411095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

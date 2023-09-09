@@ -38,6 +38,7 @@ public class StoreCore : MonoBehaviour
     {
         StoreNameTMP.text = GameManager.Instance.CurrentQuest.ZoneName;
         GameManager.Instance.CurrentQuest.SetItemsToGet();
+        DisplayShoppingList();
         ProceedBtn.gameObject.SetActive(false);
         ShoppingListTMP.text = CreateShoppingList(CountElements(GameManager.Instance.CurrentQuest.ItemsToGet));
     }
@@ -103,9 +104,9 @@ public class StoreCore : MonoBehaviour
     {
         if (currentDraggable == null) return;
 
-        if(currentDraggable.GetComponent<InstantiatedItemHandler>().newlySpawned)
+        if (currentDraggable.GetComponent<InstantiatedItemHandler>().newlySpawned)
         {
-            if (colliderZone.OverlapPoint(currentDraggable.transform.position))
+            if (CalculateOverlapPercentage(currentDraggable.GetComponent<Collider2D>(), colliderZone) >= 0.6f)
             {
                 // Keep the draggable within the collider zone
                 currentDraggable.transform.position = new Vector3(
@@ -128,14 +129,25 @@ public class StoreCore : MonoBehaviour
             foreach(Collider2D collider in colliders)
             {
                 DisplayedItemHandler displayedItemHandler = collider.GetComponent<DisplayedItemHandler>();
+
+                //  Destroy the instantiated item if it collides with a displayed item
                 if (displayedItemHandler != null)
                 {
                     RemoveItemandProcessQuest();
                     break;
                 }
             }
+
+            if (CalculateOverlapPercentage(currentDraggable.GetComponent<Collider2D>(), colliderZone) < 0.6f)
+                // Keep the draggable within the collider zone
+                currentDraggable.transform.position = new Vector3(
+                Mathf.Clamp(currentDraggable.transform.position.x, colliderZone.bounds.min.x, colliderZone.bounds.max.x),
+                Mathf.Clamp(currentDraggable.transform.position.y, colliderZone.bounds.min.y, colliderZone.bounds.max.y),
+                currentDraggable.transform.position.z
+            );
         }
     }
+    
     #endregion
 
     #region QUEST
@@ -215,6 +227,21 @@ public class StoreCore : MonoBehaviour
         }
 
         return true;
+    }
+
+    private float CalculateOverlapPercentage(Collider2D draggableCollider, Collider2D zoneCollider)
+    {
+        Bounds draggableBounds = draggableCollider.bounds;
+        Bounds zoneBounds = zoneCollider.bounds;
+
+        float overlapX = Mathf.Max(0, Mathf.Min(draggableBounds.max.x, zoneBounds.max.x) - Mathf.Max(draggableBounds.min.x, zoneBounds.min.x));
+        float overlapY = Mathf.Max(0, Mathf.Min(draggableBounds.max.y, zoneBounds.max.y) - Mathf.Max(draggableBounds.min.y, zoneBounds.min.y));
+
+        float overlapArea = overlapX * overlapY;
+        float draggableArea = draggableBounds.size.x * draggableBounds.size.y;
+
+        Debug.Log("Overlap Percentage: " + (overlapArea / draggableArea));
+        return overlapArea / draggableArea;
     }
     #endregion
 }
