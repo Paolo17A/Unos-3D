@@ -35,7 +35,6 @@ public class LobbyCore : MonoBehaviour, I_Dialogue
     #endregion
 
     #region DIALOGUE
-
     public void PlayStartingDialogue()
     {
         if (GameManager.Instance.PlayerGender == GameManager.Gender.MALE)
@@ -96,6 +95,7 @@ public class LobbyCore : MonoBehaviour, I_Dialogue
                 currentCoroutine = StartCoroutine(PlayDialogueText());
                 break;
             case DialogueData.DialogueType.ENDING_SUCCESS:
+                GameManager.Instance.ProgressContainer.SetActive(false);
                 GameManager.Instance.SceneController.CurrentScene = CurrentDialogue.NextScene;
                 break;
         }

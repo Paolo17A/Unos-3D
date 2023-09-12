@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: DialogueData 7
   m_EditorClassIdentifier: 
   <ThisDialogueType>k__BackingField: 1
-  <DialogueContent>k__BackingField: 'As you reach the Lobby you saw fallen wood and
-    debris burning, you are told to guide your classmates. '
+  <DialogueContent>k__BackingField: 'Narrator: As you reach the Lobby you saw fallen
+    wood and debris burning, you are told to guide your classmates. '
   <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: b4b35a4ccda9f8d4f959586566a58a1d,
     type: 3}
   <DialogueBackgroundFemale>k__BackingField: {fileID: 21300000, guid: b4b35a4ccda9f8d4f959586566a58a1d,
@@ -24,6 +24,7 @@ MonoBehaviour:
   <AddedFemale>k__BackingField: {fileID: 21300000, guid: e87837b11ed4a224ea545073514ec92e,
     type: 3}
   <AddedLocation>k__BackingField: {x: -7.48, y: -2.3, z: 0}
+  <ExtraAudio>k__BackingField: {fileID: 0}
   <ThirdPartySprite>k__BackingField: {fileID: 0}
   <ThirdPartyLocation>k__BackingField: {x: 0, y: 0, z: 0}
   <HasExtraSprite>k__BackingField: 0
@@ -33,6 +34,7 @@ MonoBehaviour:
     type: 2}
   <OptionDialogues>k__BackingField: []
   <OptionContent>k__BackingField: []
+  <ScenarioIndex>k__BackingField: 
   <NextScene>k__BackingField: 
   <EndingTrivia>k__BackingField: 
   <SavePointDialogue>k__BackingField: {fileID: 0}

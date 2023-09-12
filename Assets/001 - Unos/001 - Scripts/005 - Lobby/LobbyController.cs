@@ -14,6 +14,7 @@ public class LobbyController : MonoBehaviour
 
     private void Start()
     {
+        GameManager.Instance.ProgressContainer.SetActive(true);
         LobbyCore.PlayStartingDialogue();
     }
 

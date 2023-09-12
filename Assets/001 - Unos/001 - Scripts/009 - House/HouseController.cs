@@ -14,6 +14,7 @@ public class HouseController : MonoBehaviour
 
     private void Start()
     {
+        GameManager.Instance.ProgressContainer.SetActive(true);
         HouseCore.PlayStartingDialogue();
     }
 

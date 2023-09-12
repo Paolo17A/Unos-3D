@@ -180,6 +180,7 @@ public class StoreCore : MonoBehaviour
     {
         GameManager.Instance.CurrentQuest.IsAccomplised = true;
         GameManager.Instance.CurrentQuest = null;
+        GameManager.Instance.IncreaseProgress(10);
         GameManager.Instance.SceneController.CurrentScene = "WorldScene";
     }
     #endregion

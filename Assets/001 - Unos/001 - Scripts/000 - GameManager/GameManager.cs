@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 /* The GameManager is the central core of the game. It persists all throughout run-time 
  * and stores universal game objects and variables that need to be used in multiple scenes. */
@@ -65,6 +66,11 @@ public class GameManager : MonoBehaviour
     [field: Header("ERROR")]
     [field: SerializeField] public GameObject ErrorPanel { get; set; }
     [field: SerializeField] public TextMeshProUGUI ErrorTMP { get; set; }
+
+    [field: Header("PROGRESS")]
+    [field: SerializeField] public GameObject ProgressContainer { get; set; }
+    [field: SerializeField] public Slider ProgressBar { get; set; }
+    [field: SerializeField] public TextMeshProUGUI ProgressAmountTMP { get; set; }
     //===========================================================
     #endregion
 
@@ -94,10 +100,7 @@ public class GameManager : MonoBehaviour
             quest.ItemsToGet.Clear();
         }
 
-        foreach(SaveData saveData in SaveFiles)
-        {
-
-        }
+        ResetProgress();
     }
     #endregion
 
@@ -111,6 +114,20 @@ public class GameManager : MonoBehaviour
     public void HideErrorPanel()
     {
         ErrorPanel.SetActive(false);
+        Application.Quit();
+    }
+
+    public void IncreaseProgress(float amountToIncrease)
+    {
+        ProgressBar.value += amountToIncrease;
+        ProgressAmountTMP.text = "TOTAL PROGRESS:  " + ProgressBar.value + "%";
+    }
+
+    public void ResetProgress()
+    {
+        ProgressBar.value = 0;
+        ProgressAmountTMP.text = "TOTAL PROGRESS: 0%";
+
     }
     #endregion
 }

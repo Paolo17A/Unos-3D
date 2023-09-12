@@ -284,7 +284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 71c3a3edf8e02da4c85ec24c3c427f80, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d131374406afea5448852920792f5566, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4253,12 +4253,12 @@ MonoBehaviour:
     a disaster preparedness champion? Play our game, unlock the secrets of safety
     optimization, and emerge as a true hero in times of crisis.
 
-    
 
-    Join
-    us in the quest for preparedness and embark on your adventure with "Understanding
-    Natural and Human-Caused Hazards for Optimization of Safety Measures." Let''s
-    make the world a safer place, one game at a time!'
+
+    Join us in
+    the quest for preparedness and embark on your adventure with "Understanding Natural
+    and Human-Caused Hazards for Optimization of Safety Measures." Let''s make the
+    world a safer place, one game at a time!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

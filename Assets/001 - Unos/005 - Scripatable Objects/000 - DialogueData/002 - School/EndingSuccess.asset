@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EndingSuccess
   m_EditorClassIdentifier: 
   <ThisDialogueType>k__BackingField: 3
-  <DialogueContent>k__BackingField: You manage to get out of the building.
+  <DialogueContent>k__BackingField: 'Narrator: You manage to get out of the building.'
   <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: aeaf8a0683d0da248986919a2aa25651,
     type: 3}
   <DialogueBackgroundFemale>k__BackingField: {fileID: 21300000, guid: aeaf8a0683d0da248986919a2aa25651,
@@ -23,6 +23,7 @@ MonoBehaviour:
   <AddedFemale>k__BackingField: {fileID: 21300000, guid: f2259a4d53874ca409b54bac29c8e8fd,
     type: 3}
   <AddedLocation>k__BackingField: {x: -4.71, y: -1.67, z: 0}
+  <ExtraAudio>k__BackingField: {fileID: 0}
   <ThirdPartySprite>k__BackingField: {fileID: 0}
   <ThirdPartyLocation>k__BackingField: {x: 0, y: 0, z: 0}
   <HasExtraSprite>k__BackingField: 0
@@ -31,6 +32,7 @@ MonoBehaviour:
   <NextDialogue>k__BackingField: {fileID: 0}
   <OptionDialogues>k__BackingField: []
   <OptionContent>k__BackingField: []
+  <ScenarioIndex>k__BackingField: 
   <NextScene>k__BackingField: 
   <EndingTrivia>k__BackingField: During and after an earthquake, it is natural to
     experience different and strong emotions. Coping with these feelings and getting

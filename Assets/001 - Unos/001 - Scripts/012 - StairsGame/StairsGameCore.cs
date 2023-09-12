@@ -131,7 +131,9 @@ public class StairsGameCore : MonoBehaviour, I_MiniGame
 
     private IEnumerator SuccessCoroutine()
     {
+        GameManager.Instance.IncreaseProgress(15);
         yield return new WaitForSeconds(4);
+        GameManager.Instance.ProgressContainer.SetActive(false);
         GameManager.Instance.CurrentEarthquakeDialogue = GameManager.Instance.CurrentEarthquakeDialogue.ReturningPointDialogue;
         GameManager.Instance.SceneController.CurrentScene = "SchoolScene";
     }

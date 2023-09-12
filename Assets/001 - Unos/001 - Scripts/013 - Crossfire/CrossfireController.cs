@@ -22,6 +22,7 @@ public class CrossfireController : MonoBehaviour
     private void Start()
     {
         gameObject.GetComponent<AudioSource>().volume = GameManager.Instance.AudioManager.GetBGMVolume();
+        GameManager.Instance.ProgressContainer.SetActive(true);
         CrossfireCore.CurrentCrossFireGameState = CrossfireCore.CrossfireGameStates.INSTRUCTION;
     }
 

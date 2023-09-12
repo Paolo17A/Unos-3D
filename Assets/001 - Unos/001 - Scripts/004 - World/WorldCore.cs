@@ -76,9 +76,20 @@ public class WorldCore : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
+        int reductionAmount = 0;
+        foreach (QuestData quest in GameManager.Instance.TyphoonQuests)
+        {
+            if (quest.IsAccomplised)
+                reductionAmount += 10;
+        }
+        GameManager.Instance.ProgressBar.value -= reductionAmount;
+        GameManager.Instance.ProgressAmountTMP.text = "TOTAL PROGRESS: " + GameManager.Instance.ProgressBar.value.ToString() + "%";
+        GameManager.Instance.ProgressContainer.SetActive(false);
+
         MarketQuest.IsAccomplised = false;
         HardwareStoreQuest.IsAccomplised = false;
         DrugstoreQuest.IsAccomplised = false;
+       
         GameManager.Instance.SceneController.CurrentScene = "MainMenuScene";
     }
     #endregion
@@ -218,7 +229,7 @@ public class WorldCore : MonoBehaviour
         GameManager.Instance.CurrentQuest = EnteredZone.QuestData;
         if (EnteredZone.QuestData.SceneName == "SchoolScene")
             GameManager.Instance.CurrentEarthquakeDialogue = StartingSchoolDialogue;
-
+        GameManager.Instance.ProgressContainer.SetActive(false);
         GameManager.Instance.SceneController.CurrentScene = EnteredZone.QuestData.SceneName;
     }
     #endregion

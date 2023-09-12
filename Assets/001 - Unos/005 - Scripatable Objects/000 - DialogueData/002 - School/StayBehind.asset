@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: StayBehind
   m_EditorClassIdentifier: 
   <ThisDialogueType>k__BackingField: 4
-  <DialogueContent>k__BackingField: 'There was a damaged beam beside you and it knocked
-    you down. '
+  <DialogueContent>k__BackingField: 'Narrator: There was a damaged beam beside you
+    and it knocked you down. '
   <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: 0205c6a85a6625c42855acb162eb5c54,
     type: 3}
   <DialogueBackgroundFemale>k__BackingField: {fileID: 21300000, guid: 0205c6a85a6625c42855acb162eb5c54,
@@ -22,6 +22,7 @@ MonoBehaviour:
   <AddedMale>k__BackingField: {fileID: 0}
   <AddedFemale>k__BackingField: {fileID: 0}
   <AddedLocation>k__BackingField: {x: 0, y: 0, z: 0}
+  <ExtraAudio>k__BackingField: {fileID: 0}
   <ThirdPartySprite>k__BackingField: {fileID: 0}
   <ThirdPartyLocation>k__BackingField: {x: 0, y: 0, z: 0}
   <HasExtraSprite>k__BackingField: 0

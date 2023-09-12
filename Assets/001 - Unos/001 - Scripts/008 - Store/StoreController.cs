@@ -13,6 +13,7 @@ public class StoreController : MonoBehaviour
 
     private void Start()
     {
+        GameManager.Instance.ProgressContainer.SetActive(true);
         StoreCore.InitializeStore();
     }
 

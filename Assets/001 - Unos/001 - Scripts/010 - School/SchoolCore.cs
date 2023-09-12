@@ -108,9 +108,6 @@ public class SchoolCore : MonoBehaviour, I_Dialogue
             yield return new WaitForSeconds(0.025f);
         }
 
-        /*if (GameManager.Instance.CurrentEarthquakeDialogue.ThisDialogueType == DialogueData.DialogueType.ENDING_SUCCESS)
-            SchoolDialogueContainer.SetActive(false);*/
-
         //  Process what needs to be done after the dialogue is done being displayed
         if (GameManager.Instance.CurrentEarthquakeDialogue.ThisDialogueType == DialogueData.DialogueType.TALKING)
             Proceed.SetActive(true);
@@ -146,7 +143,10 @@ public class SchoolCore : MonoBehaviour, I_Dialogue
             case DialogueData.DialogueType.TALKING:
                 GameManager.Instance.CurrentEarthquakeDialogue = GameManager.Instance.CurrentEarthquakeDialogue.NextDialogue;
                 if(GameManager.Instance.CurrentEarthquakeDialogue.ThisDialogueType == DialogueData.DialogueType.MINIGAME)
+                {
+                    GameManager.Instance.ProgressContainer.SetActive(false);
                     GameManager.Instance.SceneController.CurrentScene = GameManager.Instance.CurrentEarthquakeDialogue.MiniGameScene;
+                }
                 else
                     currentCoroutine = StartCoroutine(PlayDialogueText());
                 break;
@@ -154,9 +154,15 @@ public class SchoolCore : MonoBehaviour, I_Dialogue
                 GameManager.Instance.CurrentEarthquakeDialogue = GameManager.Instance.CurrentEarthquakeDialogue.OptionDialogues[SelectedChoiceIndex];
                 SelectedChoiceIndex = 0;
                 if (GameManager.Instance.CurrentEarthquakeDialogue.ThisDialogueType == DialogueData.DialogueType.QUIT)
+                {
+                    GameManager.Instance.ProgressContainer.SetActive(false);
                     GameManager.Instance.SceneController.CurrentScene = "WorldScene";
+                }
                 else if (GameManager.Instance.CurrentEarthquakeDialogue.ThisDialogueType == DialogueData.DialogueType.MINIGAME)
+                {
+                    GameManager.Instance.ProgressContainer.SetActive(false);
                     GameManager.Instance.SceneController.CurrentScene = GameManager.Instance.CurrentEarthquakeDialogue.MiniGameScene;
+                }
                 else
                     currentCoroutine = StartCoroutine(PlayDialogueText());
                 break;
@@ -176,10 +182,12 @@ public class SchoolCore : MonoBehaviour, I_Dialogue
         alreadySelected = true;
 
         GameManager.Instance.CurrentCalamity = GameManager.Calamity.NONE;
+        GameManager.Instance.ProgressContainer.SetActive(false);
         GameManager.Instance.AudioManager.KillBackgroundMusic();
         if (GameManager.Instance.FinishedCalamities.Count == 2)
         {
             GameManager.Instance.FinishedCalamities.Clear();
+            GameManager.Instance.ResetProgress();
             GameManager.Instance.SceneController.CurrentScene = "MainMenuScene";
         }
         else
@@ -193,6 +201,9 @@ public class SchoolCore : MonoBehaviour, I_Dialogue
     {
         SelectedChoiceIndex = choice;
         StartCoroutine(GameManager.Instance.APIClient.MakeDisasterChoice(GameManager.Instance.CurrentEarthquakeDialogue.ScenarioIndex, GameManager.Instance.PlayerGender == GameManager.Gender.MALE ? "male" : "female", SelectedChoiceIndex == 0 ? "a" : "b"));
+        if(GameManager.Instance.CurrentEarthquakeDialogue.ScenarioIndex == "3" && SelectedChoiceIndex == 0)     
+            GameManager.Instance.IncreaseProgress(5);
+        
         foreach (GameObject option in Options)
             option.SetActive(false);
         LoadNextDialogue();

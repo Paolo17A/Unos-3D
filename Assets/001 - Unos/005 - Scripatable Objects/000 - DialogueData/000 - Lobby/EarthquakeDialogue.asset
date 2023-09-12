@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: EarthquakeDialogue
   m_EditorClassIdentifier: 
   <ThisDialogueType>k__BackingField: 1
-  <DialogueContent>k__BackingField: Yes about the earthquake. One might happen very
-    soon. So they are preparing earthquake drills in your school.
+  <DialogueContent>k__BackingField: 'Mother: Yes about the earthquake. One might
+    happen very soon. So they are preparing earthquake drills in your school.'
   <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: 026f9adccc3117d44a9afc6d7b20e1f3,
     type: 3}
   <DialogueBackgroundFemale>k__BackingField: {fileID: 21300000, guid: 026f9adccc3117d44a9afc6d7b20e1f3,
@@ -22,6 +22,7 @@ MonoBehaviour:
   <AddedMale>k__BackingField: {fileID: 0}
   <AddedFemale>k__BackingField: {fileID: 0}
   <AddedLocation>k__BackingField: {x: 0, y: 0, z: 0}
+  <ExtraAudio>k__BackingField: {fileID: 0}
   <ThirdPartySprite>k__BackingField: {fileID: 0}
   <ThirdPartyLocation>k__BackingField: {x: 0, y: 0, z: 0}
   <HasExtraSprite>k__BackingField: 0
@@ -31,6 +32,7 @@ MonoBehaviour:
     type: 2}
   <OptionDialogues>k__BackingField: []
   <OptionContent>k__BackingField: []
+  <ScenarioIndex>k__BackingField: 
   <NextScene>k__BackingField: 
   <EndingTrivia>k__BackingField: 
   <SavePointDialogue>k__BackingField: {fileID: 0}

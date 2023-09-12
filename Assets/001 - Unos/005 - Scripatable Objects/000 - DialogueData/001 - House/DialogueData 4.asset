@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DialogueData 4
   m_EditorClassIdentifier: 
   <ThisDialogueType>k__BackingField: 1
-  <DialogueContent>k__BackingField: Yes, Mother
+  <DialogueContent>k__BackingField: 'PLAYER: Yes, Mother'
   <DialogueBackgroundMale>k__BackingField: {fileID: 21300000, guid: 7685a17d0b61b4f48a15231efb62c8af,
     type: 3}
   <DialogueBackgroundFemale>k__BackingField: {fileID: 21300000, guid: 7685a17d0b61b4f48a15231efb62c8af,
@@ -23,14 +23,18 @@ MonoBehaviour:
   <AddedFemale>k__BackingField: {fileID: 21300000, guid: 078eca95857a77a4a8128f245f8ca0ec,
     type: 3}
   <AddedLocation>k__BackingField: {x: 0.56, y: 2.15, z: 0}
+  <ExtraAudio>k__BackingField: {fileID: 0}
   <ThirdPartySprite>k__BackingField: {fileID: 21300000, guid: d903a890c644ecc4c99c30579e51acff,
     type: 3}
   <ThirdPartyLocation>k__BackingField: {x: -2.7, y: 0.93, z: 0}
   <HasExtraSprite>k__BackingField: 0
+  <WillDisplayBoat>k__BackingField: 0
+  <MustShowSelectables>k__BackingField: 0
   <NextDialogue>k__BackingField: {fileID: 11400000, guid: c67ce892ed5098d46bf03897d55d4400,
     type: 2}
   <OptionDialogues>k__BackingField: []
   <OptionContent>k__BackingField: []
+  <ScenarioIndex>k__BackingField: 
   <NextScene>k__BackingField: 
   <EndingTrivia>k__BackingField: 
   <SavePointDialogue>k__BackingField: {fileID: 0}

@@ -21,6 +21,7 @@ public class TapGameController : MonoBehaviour
 
     private void Start()
     {
+        GameManager.Instance.ProgressContainer.SetActive(true);
         TapGameCore.CurrentTapGameState = TapGameCore.TapGameStates.INSTRUCTION;
     }
 

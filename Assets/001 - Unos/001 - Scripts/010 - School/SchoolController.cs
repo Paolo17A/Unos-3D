@@ -14,6 +14,7 @@ public class SchoolController : MonoBehaviour
 
     private void Start()
     {
+        GameManager.Instance.ProgressContainer.SetActive(true);
         SchoolCore.PlayStartingDialogue();
     }
 

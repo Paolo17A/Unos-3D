@@ -159,6 +159,7 @@ public class TapGameCore : MonoBehaviour, I_MiniGame
 
     public void HandleSuccess()
     {
+        GameManager.Instance.IncreaseProgress(15);
         GameManager.Instance.CurrentEarthquakeDialogue = GameManager.Instance.CurrentEarthquakeDialogue.ReturningPointDialogue;
         GameManager.Instance.SceneController.CurrentScene = "SchoolScene";
     }

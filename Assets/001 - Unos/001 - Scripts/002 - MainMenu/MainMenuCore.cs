@@ -129,7 +129,10 @@ public class MainMenuCore : MonoBehaviour
     {
         GameManager.Instance.AudioManager.KillBackgroundMusic();
         if(GameManager.Instance.CurrentCalamity == GameManager.Calamity.NONE)
+        {
+            GameManager.Instance.ResetProgress();
             GameManager.Instance.SceneController.CurrentScene = "GenderSelectScene";
+        }
         else
             GameManager.Instance.SceneController.CurrentScene = "WorldScene";
     }

@@ -135,7 +135,9 @@ public class HouseCore : MonoBehaviour, I_Dialogue
             Proceed.SetActive(true);
 
             if (CurrentDialogue.ThisDialogueType == DialogueData.DialogueType.ENDING_SUCCESS)
+            {
                 GameManager.Instance.FinishedCalamities.Add(GameManager.Calamity.TYPHOON);
+            }
         }
 
         DialogueFinished = true;
@@ -159,7 +161,10 @@ public class HouseCore : MonoBehaviour, I_Dialogue
     {
         SelectedItemsCount++;
         if (SelectedItemsCount == SelectableObjects.Count)
+        {
+            GameManager.Instance.IncreaseProgress(10);
             LoadNextDialogue();
+        }
     }
 
     public void LoadNextDialogue()
@@ -222,6 +227,10 @@ public class HouseCore : MonoBehaviour, I_Dialogue
         StartCoroutine(GameManager.Instance.APIClient.MakeDisasterChoice(CurrentDialogue.ScenarioIndex, GameManager.Instance.PlayerGender == GameManager.Gender.MALE ? "male" : "female", SelectedChoiceIndex == 0 ? "a" : "b"));
         foreach (GameObject option in Options)
             option.SetActive(false);
+        if (CurrentDialogue.ScenarioIndex == "1" && SelectedChoiceIndex == 1)
+            GameManager.Instance.IncreaseProgress(20);
+        else if (CurrentDialogue.ScenarioIndex == "2" && SelectedChoiceIndex == 1)
+            GameManager.Instance.IncreaseProgress(10);
         LoadNextDialogue();
     }
 
@@ -235,9 +244,11 @@ public class HouseCore : MonoBehaviour, I_Dialogue
         alreadySelected = true;
         GameManager.Instance.AudioManager.KillBackgroundMusic();
         GameManager.Instance.CurrentCalamity = GameManager.Calamity.NONE;
+        GameManager.Instance.ProgressContainer.SetActive(false);
         if (GameManager.Instance.FinishedCalamities.Count == 2)
         {
             GameManager.Instance.FinishedCalamities.Clear();
+            GameManager.Instance.ResetProgress();
             GameManager.Instance.SceneController.CurrentScene = "MainMenuScene";
         }
         else

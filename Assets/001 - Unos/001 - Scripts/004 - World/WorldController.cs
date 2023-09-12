@@ -14,6 +14,7 @@ public class WorldController : MonoBehaviour
 
     private void Start()
     {
+        GameManager.Instance.ProgressContainer.SetActive(true);
         WorldCore.SetProperZones();
         WorldCore.InitializeQuests();
         //WorldCore.ToggleQuestPanel();
